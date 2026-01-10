@@ -1,0 +1,16 @@
+patron,categoria,nivel_alerta,sugerencia
+pésimo servicio,Reclamo crítico,Alto,Escalar el reclamo a atención prioritaria
+muy mal servicio,Reclamo crítico,Alto,Asignar supervisor y seguimiento inmediato
+nunca solucionan nada,Reclamo crítico,Alto,Revisar historial del cliente y escalar caso
+cancelaré el servicio,Reclamo crítico,Alto,Contactar al cliente para retención
+cancelar el servicio,Reclamo crítico,Alto,Ofrecer beneficios para evitar cancelación
+voy a demandar,Riesgo legal,Crítico,Derivar el caso al departamento legal
+los voy a demandar,Riesgo legal,Crítico,Activar protocolo legal inmediato
+esto es una estafa,Riesgo legal,Crítico,Escalar a auditoría y área legal
+fraude,Riesgo legal,Crítico,Notificar a cumplimiento y área legal
+reclamo formal,Reclamo,Medio,Registrar reclamo en el sistema
+nadie responde,Reclamo,Medio,Asignar agente de atención
+no es justo,Reclamo,Medio,Revisar políticas y responder al cliente
+mal servicio,Queja leve,Bajo,Enviar disculpas y encuesta de satisfacción
+no estoy satisfecho,Queja leve,Bajo,Contactar al cliente para mejorar experiencia
+muy lento,Queja leve,Bajo,Optimizar tiempos de atención
