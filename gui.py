@@ -12,7 +12,7 @@ class App:
         self.root.title("Sistema de Detección de Reclamos Críticos")
         self.root.geometry("800x600")
 
-        # ================== TÍTULO ==================
+        #  TÍTULO 
         titulo = tk.Label(
             root,
             text="Sistema de Detección de Reclamos Críticos",
@@ -20,14 +20,14 @@ class App:
         )
         titulo.pack(pady=10)
 
-        # ================== MENSAJE ==================
+        #  MENSAJE 
         lbl_msg = tk.Label(root, text="Mensaje del cliente:")
         lbl_msg.pack(anchor="w", padx=10)
 
         self.txt_mensaje = scrolledtext.ScrolledText(root, height=5)
         self.txt_mensaje.pack(fill="x", padx=10, pady=5)
 
-        # ================== BOTONES ==================
+        #  BOTONES 
         frame_botones = tk.Frame(root)
         frame_botones.pack(pady=10)
 
@@ -47,17 +47,16 @@ class App:
         )
         btn_archivo.grid(row=0, column=1, padx=5)
 
-        # ================== RESULTADOS ==================
+        # RESULTADOS 
         lbl_res = tk.Label(root, text="Resultados:")
         lbl_res.pack(anchor="w", padx=10)
 
         self.txt_resultados = scrolledtext.ScrolledText(root, height=18)
         self.txt_resultados.pack(fill="both", expand=True, padx=10, pady=5)
 
-    # =================================================
-    # ================= FUNCIONES =====================
-    # =================================================
-
+  
+    # FUNCIONES
+   
     def analizar_manual(self):
         mensaje = self.txt_mensaje.get("1.0", tk.END).strip()
 
@@ -93,7 +92,7 @@ class App:
 
             extension = os.path.splitext(ruta)[1].lower()
 
-            # ======= LECTURA SEGÚN EXTENSIÓN =======
+            # LECTURA SEGÚN EXTENSIÓN 
             if extension == ".csv":
                 with open(ruta, encoding="utf-8") as f:
                     reader = csv.DictReader(f)
@@ -152,7 +151,7 @@ class App:
         self.txt_resultados.insert(tk.END, "\n")
 
 
-# ================== EJECUCIÓN ==================
+# EJECUCIÓN 
 if __name__ == "__main__":
     root = tk.Tk()
     app = App(root)
