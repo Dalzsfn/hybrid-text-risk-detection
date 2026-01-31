@@ -1,12 +1,57 @@
-import pdfplumber
+from typing import List
+import csv
+import io
 
-def leer_txt(file):
-    contenido = file.file.read().decode("utf-8")
+from PyPDF2 import PdfReader
+import pandas as pd
+from fastapi import UploadFile
+
+
+# =====================
+# 📄 TXT → TEXTO
+# =====================
+def leer_txt(archivo: UploadFile) -> str:
+    contenido = archivo.file.read().decode("utf-8", errors="ignore")
     return contenido
 
-def leer_pdf(file):
+
+# =====================
+# 📄 PDF → TEXTO
+# =====================
+def leer_pdf(archivo: UploadFile) -> str:
+    reader = PdfReader(archivo.file)
     texto = ""
-    with pdfplumber.open(file.file) as pdf:
-        for page in pdf.pages:
-            texto += page.extract_text() + "\n"
+
+    for pagina in reader.pages:
+        texto += pagina.extract_text() or ""
+
+    return texto
+
+
+# =====================
+# 📊 CSV → TEXTO
+# (para ANALIZAR MENSAJES)
+# =====================
+def leer_csv_como_texto(archivo: UploadFile) -> str:
+    contenido = archivo.file.read().decode("utf-8", errors="ignore")
+    lector = csv.reader(io.StringIO(contenido))
+
+    texto = ""
+    for fila in lector:
+        texto += " ".join(fila) + "\n"
+
+    return texto
+
+
+# =====================
+# 📊 EXCEL → TEXTO
+# (para ANALIZAR MENSAJES)
+# =====================
+def leer_excel_como_texto(archivo: UploadFile) -> str:
+    df = pd.read_excel(archivo.file)
+
+    texto = ""
+    for _, fila in df.iterrows():
+        texto += " ".join(map(str, fila.values)) + "\n"
+
     return texto

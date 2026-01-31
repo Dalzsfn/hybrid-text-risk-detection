@@ -3,8 +3,6 @@ import Header from "./components/Header"
 
 import MessageInput from "./pages/MessageInput"
 import PatternConfig from "./pages/PatternConfig"
-import Results from "./pages/Results"
-import AdminPanel from "./pages/AdminPanel"
 import Stats from "./pages/Stats"
 
 function App() {
@@ -16,8 +14,6 @@ function App() {
         <Routes>
           <Route path="/" element={<MessageInput />} />
           <Route path="/patrones" element={<PatternConfig />} />
-          <Route path="/resultados" element={<Results />} />
-          <Route path="/admin" element={<AdminPanel />} />
           <Route path="/stats" element={<Stats />} />
         </Routes>
       </main>

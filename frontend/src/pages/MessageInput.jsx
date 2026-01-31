@@ -1,4 +1,5 @@
 import { useState } from "react"
+import FileUpload from "../components/FileUpload"
 
 function MessageInput() {
   const [mensaje, setMensaje] = useState("")
@@ -27,72 +28,76 @@ function MessageInput() {
 
       const data = await res.json()
 
-      if (data.error) {
-        setError(data.error)
-      } else {
-        setResultados(data.resultados)
-      }
+      if (data.error) setError(data.error)
+      else setResultados(data.resultados)
 
-    } catch (err) {
+    } catch {
       setError("No se pudo conectar con el servidor")
     }
 
     setCargando(false)
   }
 
+  const eliminarArchivo = () => {
+    setArchivo(null)
+  }
+
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-6">
 
-      {/* 📝 TEXTO */}
-      <div>
-        <label className="block font-semibold mb-2">
-          Mensaje del cliente
-        </label>
-        <textarea
-          className="w-full border rounded p-3 min-h-[120px]"
-          placeholder="Ingrese el mensaje del cliente..."
-          value={mensaje}
-          onChange={e => setMensaje(e.target.value)}
-        />
-      </div>
+      {/* TEXTO */}
+      <textarea
+        className="w-full border rounded-lg p-3 min-h-[120px]"
+        placeholder="Ingrese el mensaje del cliente..."
+        value={mensaje}
+        onChange={e => setMensaje(e.target.value)}
+      />
 
-      {/* 📎 ARCHIVO */}
-      <div>
-        <label className="block font-semibold mb-2">
-          Subir archivo (PDF o TXT)
-        </label>
-        <input
-          type="file"
-          accept=".pdf,.txt"
-          onChange={e => setArchivo(e.target.files[0])}
+      {/* FILE UPLOAD */}
+      {!archivo && (
+        <FileUpload
+          title="Subir archivo"
+          description="PDF, TXT, CSV o Excel"
+          onFileSelect={file => setArchivo(file)}
         />
-        {archivo && (
-          <p className="text-sm text-gray-500 mt-1">
-            Archivo seleccionado: {archivo.name}
-          </p>
-        )}
-      </div>
+      )}
 
-      {/* ▶️ BOTÓN */}
+      {/* ARCHIVO SELECCIONADO */}
+      {archivo && (
+        <div className="flex items-center justify-between bg-gray-100 p-3 rounded">
+          <span className="text-sm">
+            📎 <strong>{archivo.name}</strong>
+          </span>
+
+          <button
+            onClick={eliminarArchivo}
+            className="text-red-600 text-sm hover:underline"
+          >
+            Eliminar
+          </button>
+        </div>
+      )}
+
+      {/* BOTÓN ANALIZAR */}
       <button
         onClick={analizar}
         disabled={cargando}
-        className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded disabled:opacity-50"
+        className="bg-blue-600 text-white px-6 py-2 rounded-lg disabled:opacity-50"
       >
         {cargando ? "Analizando..." : "Analizar"}
       </button>
 
-      {/* ❌ ERROR */}
+      {/* ERROR */}
       {error && (
         <div className="bg-red-100 text-red-700 p-3 rounded">
           {error}
         </div>
       )}
 
-      {/* 📊 RESULTADOS */}
+      {/* RESULTADOS */}
       {resultados && (
-        <div className="mt-6 space-y-4">
-          <h3 className="text-xl font-bold">Resultados</h3>
+        <div className="space-y-3">
+          <h3 className="font-bold text-lg">Resultados</h3>
 
           {resultados.length === 0 && (
             <p className="text-green-600">
@@ -101,13 +106,10 @@ function MessageInput() {
           )}
 
           {resultados.map((r, i) => (
-            <div
-              key={i}
-              className="border rounded p-4 bg-gray-50"
-            >
+            <div key={i} className="border rounded p-4 bg-gray-50">
               <p><b>Patrón:</b> {r.patron}</p>
               <p><b>Categoría:</b> {r.categoria}</p>
-              <p><b>Nivel de alerta:</b> {r.alerta}</p>
+              <p><b>Alerta:</b> {r.alerta}</p>
               <p><b>Sugerencia:</b> {r.sugerencia}</p>
             </div>
           ))}

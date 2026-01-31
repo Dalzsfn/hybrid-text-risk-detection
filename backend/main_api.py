@@ -4,8 +4,26 @@ from pydantic import BaseModel
 import csv
 import os
 
+# 🔹 Lectura de MENSAJES
+from utils_archivos import (
+    leer_txt,
+    leer_pdf,
+    leer_csv_como_texto,
+    leer_excel_como_texto
+)
+
+# 🔹 Lectura de PATRONES
+from utils_patrones import (
+    leer_patrones_csv,
+    leer_patrones_excel,
+    leer_patrones_txt,
+    guardar_patrones
+)
+
 from sistema import cargar_patrones, analizar_mensaje
-from utils_archivos import leer_txt, leer_pdf
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PATRONES_PATH = os.path.join(BASE_DIR, "data", "patrones.csv")
 
 app = FastAPI()
 
@@ -19,7 +37,6 @@ app.add_middleware(
 )
 
 # -------- MODELOS --------
-
 class PatronEntrada(BaseModel):
     patron: str
     categoria: str
@@ -38,33 +55,40 @@ async def analizar(
     mensaje: str = Form(""),
     archivo: UploadFile = File(None)
 ):
-    texto_total = mensaje
+    texto_total = mensaje or ""
 
     if archivo:
-        if archivo.filename.endswith(".txt"):
+        nombre = archivo.filename.lower()
+
+        if nombre.endswith(".txt"):
             texto_archivo = leer_txt(archivo)
-        elif archivo.filename.endswith(".pdf"):
+
+        elif nombre.endswith(".pdf"):
             texto_archivo = leer_pdf(archivo)
+
+        elif nombre.endswith(".csv"):
+            texto_archivo = leer_csv_como_texto(archivo)
+
+        elif nombre.endswith(".xlsx"):
+            texto_archivo = leer_excel_como_texto(archivo)
+
         else:
-            return {"error": "Formato no soportado. Use PDF o TXT."}
+            return {"error": "Formato no soportado"}
 
         texto_total += "\n" + texto_archivo
 
-    # 🔄 cargar patrones ACTUALIZADOS
-    patrones_actuales = cargar_patrones("data/patrones.csv")
-    resultados = analizar_mensaje(texto_total, patrones_actuales)
+    patrones = cargar_patrones(PATRONES_PATH)
+    resultados = analizar_mensaje(texto_total, patrones)
 
     return {
         "texto_analizado": texto_total,
         "resultados": resultados
     }
 
-# ➕ AGREGAR NUEVO PATRÓN
+# ➕ AGREGAR PATRÓN MANUAL
 @app.post("/patrones")
 def agregar_patron(p: PatronEntrada):
-    ruta = os.path.join("data", "patrones.csv")
-
-    with open(ruta, mode="a", newline="", encoding="utf-8") as f:
+    with open(PATRONES_PATH, mode="a", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow([
             p.patron,
@@ -72,5 +96,30 @@ def agregar_patron(p: PatronEntrada):
             p.nivel_alerta,
             p.sugerencia
         ])
+    print("📂 Guardando en:", os.path.abspath(PATRONES_PATH))
 
     return {"status": "Patrón agregado correctamente"}
+
+# 📂 CARGAR PATRONES DESDE ARCHIVO
+@app.post("/patrones/cargar-archivo")
+async def cargar_patrones_archivo(archivo: UploadFile = File(...)):
+    nombre = archivo.filename.lower()
+
+    if nombre.endswith(".csv"):
+        patrones = leer_patrones_csv(archivo)
+
+    elif nombre.endswith(".xlsx"):
+        patrones = leer_patrones_excel(archivo)
+
+    elif nombre.endswith(".txt"):
+        patrones = leer_patrones_txt(archivo)
+
+    else:
+        return {"error": "Formato no soportado"}
+
+    guardar_patrones(patrones)
+
+    return {
+        "status": "Patrones cargados correctamente",
+        "cantidad": len(patrones)
+    }
