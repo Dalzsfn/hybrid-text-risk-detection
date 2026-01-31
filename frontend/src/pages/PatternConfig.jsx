@@ -53,6 +53,13 @@ function PatternConfig() {
     }
   }
 
+  // ---------- ELIMINAR ARCHIVO ----------
+  const eliminarArchivo = () => {
+    setArchivo(null)
+    setMensajeArchivo(null)
+    setErrorArchivo(null)
+  }
+
   // ---------- CARGAR ARCHIVO ----------
   const subirArchivo = async () => {
     if (!archivo) return
@@ -156,21 +163,36 @@ function PatternConfig() {
           📂 Cargar patrones desde archivo
         </h2>
 
-        <FileUpload
-          title="Subir archivo de patrones"
-          description="Formatos: TXT, CSV o Excel"
-          onFileSelect={file => setArchivo(file)}
-        />
+        {/* FILE UPLOAD */}
+        {!archivo && (
+          <FileUpload
+            key={archivo ? archivo.name : "empty"}   // 👈 resetea input
+            title="Subir archivo de patrones"
+            description="TXT, CSV o Excel"
+            onFileSelect={file => setArchivo(file)}
+          />
+        )}
 
+        {/* ARCHIVO SELECCIONADO */}
         {archivo && (
-          <p className="text-sm text-gray-600">
-            📎 {archivo.name}
-          </p>
+          <div className="flex items-center justify-between bg-gray-100 p-3 rounded">
+            <span className="text-sm">
+              📎 <strong>{archivo.name}</strong>
+            </span>
+
+            <button
+              onClick={eliminarArchivo}
+              className="text-red-600 text-sm hover:underline"
+            >
+              Eliminar
+            </button>
+          </div>
         )}
 
         <button
           onClick={subirArchivo}
-          className="bg-green-600 text-white px-5 py-2 rounded"
+          disabled={!archivo}
+          className="bg-green-600 text-white px-5 py-2 rounded disabled:opacity-50"
         >
           Cargar archivo
         </button>

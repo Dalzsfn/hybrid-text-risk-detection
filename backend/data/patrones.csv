@@ -22,3 +22,15 @@ pruebitaaaaa,Reclamo,Medio,pruebota
 pruebitaaaa,Reclamo,Medio,pruebota
 prueba,Reclamo,Medio,aaaaaaaaaaaa
 pruebita,Reclamo,Medio,pruebota
+holaaa,Reclamo,Medio,Responder saludo
+ola,Queja leve,Bajo,Ignorar o responder cordialmente
+pésimo servicio,Reclamo crítico,Alto,Escalar reclamo al supervis
+fraude,Riesgo legal,Cr��tico,Derivar al ��r
+malaaaaaaaaaa atenci��n,Queja leve,Bajo,Registrar y monito
+pésimo servicio,Reclamo crítico,Alto,Escalar reclamo al supervis
+fraude,Riesgo legal,Cr��tico,Derivar al ��r
+malaaaaaaaaaa atenci��n,Queja leve,Bajo,Registrar y monito
+patron,categoria,nivel_alerta,sugerencia
+pésimo servicio,Reclamo crítico,Alto,Escalar reclamo al supervisor
+fraude,Riesgo legal,Crítico,Derivar al área legal
+malaaaaaaaaaa atención,Queja leve,Bajo,Registrar y monitorear
