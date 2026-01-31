@@ -68,16 +68,26 @@ def eliminar_patron(patron: str):
 # ===============================
 @router.post("/patrones/cargar-archivo")
 async def cargar_archivo(archivo: UploadFile = File(...)):
-    nombre = archivo.filename.lower()
+    if not archivo.filename:
+        return {"error": "Archivo inexistente"}
 
-    if nombre.endswith(".csv"):
-        nuevos = leer_patrones_csv(archivo)
-    elif nombre.endswith(".xlsx"):
-        nuevos = leer_patrones_excel(archivo)
-    elif nombre.endswith(".txt"):
-        nuevos = leer_patrones_txt(archivo)
-    else:
-        return {"error": "Formato no soportado"}
+    try:
+        nombre = archivo.filename.lower()
+
+        if nombre.endswith(".csv"):
+            nuevos = leer_patrones_csv(archivo)
+        elif nombre.endswith(".xlsx"):
+            nuevos = leer_patrones_excel(archivo)
+        elif nombre.endswith(".txt"):
+            nuevos = leer_patrones_txt(archivo)
+        else:
+            return {"error": "Formato no soportado"}
+
+        if not nuevos:
+            return {"error": "El archivo no contiene patrones válidos"}
+
+    except Exception:
+        return {"error": "No se pudo procesar el archivo"}
 
     patrones = leer_patrones_csv_base()
 
@@ -87,3 +97,4 @@ async def cargar_archivo(archivo: UploadFile = File(...)):
 
     guardar_patrones(patrones)
     return {"cantidad": len(nuevos)}
+

@@ -41,28 +41,42 @@ async def analizar(
     mensaje: str = Form(""),
     archivo: UploadFile = File(None)
 ):
-    texto = mensaje or ""
+    texto = mensaje.strip() if mensaje else ""
 
-    if archivo:
-        nombre = archivo.filename.lower()
-        if nombre.endswith(".txt"):
-            texto += leer_txt(archivo)
-        elif nombre.endswith(".pdf"):
-            texto += leer_pdf(archivo)
-        elif nombre.endswith(".csv"):
-            texto += leer_csv_como_texto(archivo)
-        elif nombre.endswith(".xlsx"):
-            texto += leer_excel_como_texto(archivo)
-        else:
-            return {"error": "Formato no soportado"}
+    if not texto and not archivo:
+        return {"error": "No se recibió ningún mensaje ni archivo para analizar"}
+
+    try:
+        if archivo:
+            if not archivo.filename:
+                return {"error": "Archivo inexistente"}
+
+            nombre = archivo.filename.lower()
+
+            if nombre.endswith(".txt"):
+                texto += leer_txt(archivo)
+            elif nombre.endswith(".pdf"):
+                texto += leer_pdf(archivo)
+            elif nombre.endswith(".csv"):
+                texto += leer_csv_como_texto(archivo)
+            elif nombre.endswith(".xlsx"):
+                texto += leer_excel_como_texto(archivo)
+            else:
+                return {"error": "Formato no soportado"}
+
+    except ValueError as e:
+        return {"error": str(e)}
+
+    if not texto.strip():
+        return {"error": "El contenido a analizar está vacío"}
 
     patrones = cargar_patrones(PATRONES_PATH)
     resultados = analizar_mensaje(texto, patrones)
 
-    # 🔥 REGISTRAR ESTADÍSTICAS AQUÍ
     registrar_resultados(resultados)
 
     return {"resultados": resultados}
+
 
 
 @app.get("/estadisticas")
