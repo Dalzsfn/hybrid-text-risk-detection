@@ -3,7 +3,14 @@ from fastapi.middleware.cors import CORSMiddleware
 from routes.patrones import router as patrones_router
 from medicion import medir_algoritmos
 from algoritmos.normalizacion import normalizar_texto
-from estadisticas import registrar_resultados, obtener_estadisticas
+from estadisticas import (
+    registrar_resultados,
+    obtener_estadisticas,
+    reset_estadisticas
+)
+
+from sistema import cargar_patrones, analizar_mensaje
+from utils_patrones import PATRONES_PATH
 
 from utils_archivos import (
     leer_txt,
@@ -12,8 +19,6 @@ from utils_archivos import (
     leer_excel_como_texto
 )
 
-from sistema import cargar_patrones, analizar_mensaje
-from utils_patrones import PATRONES_PATH
 
 app = FastAPI()
 
@@ -64,4 +69,8 @@ async def analizar(
 def estadisticas():
     return obtener_estadisticas()
 
+@app.post("/estadisticas/reset")
+def reset_stats():
+    reset_estadisticas()
+    return {"status": "Estadísticas reiniciadas correctamente"}
 

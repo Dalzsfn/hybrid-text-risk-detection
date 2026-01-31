@@ -9,38 +9,48 @@ _estadisticas = {
     "total_analisis": 0,
     "tiempo_kmp_ns": [],
     "tiempo_bm_ns": [],
-    "categorias": defaultdict(int)
+    "categorias": defaultdict(int),
+    "historial_ejecuciones": []   # 👈 NUEVO
 }
+
 
 
 # ===============================
 # ➕ REGISTRAR UNA EJECUCIÓN
 # ===============================
 def registrar_resultados(resultados: List[Dict]):
-    """
-    Se llama UNA VEZ cada vez que se analiza un texto.
-    Recibe la lista de resultados devuelta por analizar_mensaje().
-    """
-
     _estadisticas["total_analisis"] += 1
+
+    tiempos_kmp = []
+    tiempos_bm = []
 
     for r in resultados:
         res = r["resultado"]
 
-        _estadisticas["tiempo_kmp_ns"].append(res["tiempo_kmp_ns"])
-        _estadisticas["tiempo_bm_ns"].append(res["tiempo_bm_ns"])
+        tiempos_kmp.append(res["tiempo_kmp_ns"])
+        tiempos_bm.append(res["tiempo_bm_ns"])
 
         categoria = r["categoria"]
         _estadisticas["categorias"][categoria] += 1
+
+    # Promedio POR EJECUCIÓN
+    ejecucion = {
+        "kmp": sum(tiempos_kmp) // len(tiempos_kmp) if tiempos_kmp else 0,
+        "boyer_moore": sum(tiempos_bm) // len(tiempos_bm) if tiempos_bm else 0
+    }
+
+    _estadisticas["historial_ejecuciones"].append(ejecucion)
+
+    # Mantener estadísticas globales
+    _estadisticas["tiempo_kmp_ns"].extend(tiempos_kmp)
+    _estadisticas["tiempo_bm_ns"].extend(tiempos_bm)
+
 
 
 # ===============================
 # 📈 OBTENER ESTADÍSTICAS
 # ===============================
 def obtener_estadisticas():
-    """
-    Devuelve las estadísticas listas para el frontend.
-    """
 
     def promedio(valores):
         return sum(valores) // len(valores) if valores else 0
@@ -53,8 +63,11 @@ def obtener_estadisticas():
             "boyer_moore": promedio(_estadisticas["tiempo_bm_ns"])
         },
 
-        "conteo_categorias": dict(_estadisticas["categorias"])
+        "conteo_categorias": dict(_estadisticas["categorias"]),
+
+        "historial_ejecuciones": _estadisticas["historial_ejecuciones"]  # 👈 NUEVO
     }
+
 
 
 # ===============================
@@ -68,3 +81,5 @@ def reset_estadisticas():
     _estadisticas["tiempo_kmp_ns"].clear()
     _estadisticas["tiempo_bm_ns"].clear()
     _estadisticas["categorias"].clear()
+    _estadisticas["historial_ejecuciones"].clear()
+
