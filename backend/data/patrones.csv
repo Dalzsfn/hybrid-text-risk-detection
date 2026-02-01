@@ -7,7 +7,6 @@ cancelar el servicio,Reclamo crítico,Alto,Ofrecer beneficios para evitar cancel
 voy a demandar,Riesgo legal,Crítico,Derivar el caso al departamento legal
 los voy a demandar,Riesgo legal,Crítico,Activar protocolo legal inmediato
 esto es una estafa,Riesgo legal,Crítico,Escalar a auditoría y área legal
-fraude,Riesgo legal,Crítico,Notificar a cumplimiento y área legal
 reclamo formal,Reclamo,Medio,Registrar reclamo en el sistema
 nadie responde,Reclamo,Medio,Asignar agente de atención
 no es justo,Reclamo,Medio,Revisar políticas y responder al cliente
@@ -27,3 +26,5 @@ demasiado caro,Queja leve,Bajo,Comparar precios con la competencia
 muy caro,Queja leve,Bajo,Ofrecer promociones o descuentos
 excesivamente caro,Queja leve,Bajo,Evaluar estructura de precios
 cobro adicional indebido,Reclamo,Medio,Explicar cargos y ofrecer solución
+fraude,Riesgo legal,Crítico,Derivar al área legal
+malísima atención,Queja leve,Bajo,Registrar y monitorear
