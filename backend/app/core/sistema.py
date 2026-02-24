@@ -1,6 +1,6 @@
 import csv
 from backend.app.core.medicion import medir_algoritmos
-from utils.normalization import normalizar_texto
+from backend.utils.normalization import normalizar_texto
 import os
 
 

@@ -3,8 +3,7 @@ import io
 from PyPDF2 import PdfReader
 import pandas as pd
 from fastapi import UploadFile
-
-from algoritmos.normalizacion import normalizar_texto
+from backend.utils.normalization import normalizar_texto
 
 
 def leer_txt(archivo: UploadFile) -> str:

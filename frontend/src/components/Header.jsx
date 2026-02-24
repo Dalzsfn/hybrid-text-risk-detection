@@ -16,7 +16,6 @@ function Header() {
             Veritas
           </h1>
           <p className="text-sm text-gray-500">
-            Estructuras de Datos II
           </p>
         </div>
       </div>
