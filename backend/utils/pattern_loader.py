@@ -1,11 +1,7 @@
 import csv
 import io
 import pandas as pd
-from pathlib import Path
-
-# backend/
-BASE_DIR = Path(__file__).resolve().parent
-PATRONES_PATH = BASE_DIR / "data" / "patrones.csv"
+from backend.api.config import PATRONES_PATH
 
 
 def leer_patrones_csv(archivo):
@@ -70,9 +66,6 @@ def leer_patrones_csv_base():
 
 
 def guardar_patrones(patrones):
-    print("🟢 GUARDANDO EN:", PATRONES_PATH.resolve())
-    print("🟢 TOTAL:", len(patrones))
-
     PATRONES_PATH.parent.mkdir(exist_ok=True)
 
     with open(PATRONES_PATH, "w", newline="", encoding="utf-8") as f:

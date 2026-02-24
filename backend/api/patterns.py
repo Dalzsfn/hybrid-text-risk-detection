@@ -2,7 +2,7 @@ from fastapi import APIRouter, UploadFile, File
 from pydantic import BaseModel
 from urllib.parse import unquote
 
-from utils_patrones import (
+from backend.utils.pattern_loader import (
     leer_patrones_csv_base,
     guardar_patrones,
     leer_patrones_csv,

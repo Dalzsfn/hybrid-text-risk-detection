@@ -1,4 +1,4 @@
-import logo from "../assets/logo.jpeg"
+import logo from "../assets/veritas.png"
 import Navigation from "./Navigation"
 
 function Header() {
@@ -13,7 +13,7 @@ function Header() {
 
         <div>
           <h1 className="text-xl font-bold text-gray-800">
-            WISEcheck
+            Veritas
           </h1>
           <p className="text-sm text-gray-500">
             Estructuras de Datos II

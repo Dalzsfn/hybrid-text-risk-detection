@@ -1,18 +1,17 @@
 from fastapi import FastAPI, UploadFile, File, Form
 from fastapi.middleware.cors import CORSMiddleware
-from routes.patrones import router as patrones_router
-from medicion import medir_algoritmos
-from algoritmos.normalizacion import normalizar_texto
-from estadisticas import (
+from backend.api.patterns import router as patrones_router
+from backend.app.core.medicion import medir_algoritmos
+from backend.app.core.estadisticas import (
     registrar_resultados,
     obtener_estadisticas,
     reset_estadisticas
 )
 
-from sistema import cargar_patrones, analizar_mensaje
-from utils_patrones import PATRONES_PATH
+from backend.app.core.sistema import cargar_patrones, analizar_mensaje
+from backend.utils.pattern_loader import PATRONES_PATH
 
-from utils_archivos import (
+from backend.utils.file_utils import (
     leer_txt,
     leer_pdf,
     leer_csv_como_texto,
