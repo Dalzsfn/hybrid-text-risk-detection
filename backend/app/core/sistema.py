@@ -1,6 +1,7 @@
 import csv
 from backend.app.core.medicion import medir_algoritmos
 from backend.utils.normalization import normalizar_texto
+from backend.ml.inference import analizar_texto
 import os
 
 
@@ -40,11 +41,29 @@ def analizar_mensaje(mensaje, patrones):
 
         if r["pos_kmp"] != -1 or r["pos_bm"] != -1:
             resultados.append({
-                "patron": p["patron"],
-                "categoria": p["categoria"],
-                "alerta": p["nivel_alerta"],
-                "sugerencia": p["sugerencia"],
-                "resultado": r
-            })
+            "patron": p["patron"],
+            "categoria": p["categoria"],
+            "alerta": p["nivel_alerta"],
+            "sugerencia": p["sugerencia"],
+            "tipo_match": "exacto",
+            "confianza_patron": 1.0,  
+            "confianza_modelo": None
+    })
+            
+    if resultados:
+        return resultados
+    
+    resultados_ml = analizar_texto(mensaje)
+    for r in resultados_ml:
+        resultados.append({
+        "patron": "Coincidencia semántica",
+        "categoria": r["categoria"],
+        "alerta": "media",
+        "sugerencia": "Revisar posible coincidencia semántica",
+        "tipo_match": "aproximado",
+        "confianza_patron": r["probabilidad"],   # similitud / coseno
+        "confianza_modelo": r["probabilidad"]    # probabilidad clasificación
+    })
 
     return resultados
+    
