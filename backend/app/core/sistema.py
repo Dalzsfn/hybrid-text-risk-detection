@@ -32,38 +32,41 @@ def cargar_mensajes(path_relativo):
 
 def analizar_mensaje(mensaje, patrones):
     resultados = []
-
+    patrones_exactos = set()
     mensaje_n = normalizar_texto(mensaje)
-
+    
     for p in patrones:
         patron_n = normalizar_texto(p["patron"])
         r = medir_algoritmos(mensaje_n, patron_n)
 
         if r["pos_kmp"] != -1 or r["pos_bm"] != -1:
             resultados.append({
-            "patron": p["patron"],
-            "categoria": p["categoria"],
-            "alerta": p["nivel_alerta"],
-            "sugerencia": p["sugerencia"],
-            "tipo_match": "exacto",
-            "confianza_patron": 1.0,  
-            "confianza_modelo": None
-    })
-            
-    if resultados:
-        return resultados
-    
+                "patron": p["patron"],
+                "categoria": p["categoria"],
+                "alerta": p["nivel_alerta"],
+                "sugerencia": p["sugerencia"],
+                "tipo_match": "exacto",
+                "confianza_patron": 1.0,
+                "confianza_modelo": None
+            })
+
+            patrones_exactos.add(p["patron"])
+
     resultados_ml = analizar_texto(mensaje)
+
     for r in resultados_ml:
-        resultados.append({
-        "patron": "Coincidencia semántica",
-        "categoria": r["categoria"],
-        "alerta": "media",
-        "sugerencia": "Revisar posible coincidencia semántica",
-        "tipo_match": "aproximado",
-        "confianza_patron": r["probabilidad"],   # similitud / coseno
-        "confianza_modelo": r["probabilidad"]    # probabilidad clasificación
-    })
+
+        if r["patron_relacionado"] not in patrones_exactos:
+
+            resultados.append({
+                "patron": r["patron_relacionado"],
+                "categoria": r["categoria"],
+                "alerta": "media",
+                "sugerencia": "Revisar posible coincidencia semántica",
+                "tipo_match": "aproximado",
+                "confianza_patron": float(r["confianza_patron"]),
+                "confianza_modelo": float(r["confianza_modelo"])
+            })
 
     return resultados
     

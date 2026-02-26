@@ -1,42 +1,43 @@
 import joblib
 from pathlib import Path
-from backend.api.config import MODEL_PATH, MODEL_DIR
-import os
+from backend.api.config import MODEL_PATH
 
-_model = None
-_vectorizer = None
-_patrones_vec = None
-_patrones_texto = None
-
+_model_cache = None
 
 def load_ml_components():
-    global _model, _vectorizer, _patrones_vec, _patrones_texto
+    global _model_cache
 
-    if _model is None:
-        if not Path(MODEL_PATH).exists():
+    if _model_cache is None:
+
+        model_path = Path(MODEL_PATH)
+
+        if not model_path.exists():
             raise FileNotFoundError(
                 f"No se encontró el modelo en {MODEL_PATH}. "
                 "Ejecuta primero el script de entrenamiento."
             )
 
-        _model = joblib.load(MODEL_PATH)
+        model_data = joblib.load(model_path)
+        if "pipeline" not in model_data:
+            raise ValueError("El archivo del modelo no contiene 'pipeline'.")
 
-        if "tfidf" not in _model.named_steps:
+        if "patrones_vec" not in model_data:
+            raise ValueError("El archivo del modelo no contiene 'patrones_vec'.")
+
+        if "patrones_texto" not in model_data:
+            raise ValueError("El archivo del modelo no contiene 'patrones_texto'.")
+
+        pipeline = model_data["pipeline"]
+        patrones_vec = model_data["patrones_vec"]
+        patrones_texto = model_data["patrones_texto"]
+
+        if "tfidf" not in pipeline.named_steps:
             raise ValueError(
-                "El modelo cargado no contiene un paso 'tfidf' en el pipeline."
+                "El pipeline no contiene el paso 'tfidf'."
             )
 
-        _vectorizer = _model.named_steps["tfidf"]
+        vectorizer = pipeline.named_steps["tfidf"]
 
-        patrones_path = MODEL_DIR / "patrones.pkl"
+        _model_cache = (pipeline, vectorizer, patrones_vec, patrones_texto)
 
-        if not patrones_path.exists():
-            raise FileNotFoundError(
-                f"No se encontró el archivo de patrones en {patrones_path}"
-            )
-
-        _patrones_texto = joblib.load(patrones_path)
-        
-        _patrones_vec = _vectorizer.transform(_patrones_texto)
-
-    return _model, _vectorizer, _patrones_vec, _patrones_texto
+    return _model_cache

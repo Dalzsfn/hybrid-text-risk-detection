@@ -21,7 +21,7 @@ def entrenar_modelo():
         ("tfidf", TfidfVectorizer(
             preprocessor=normalizar_texto,
             stop_words=stopwords_es,
-            max_features=100,
+            max_features=250,
             ngram_range=(1, 2)
         )),
         ("clf", LogisticRegression(max_iter=1000))
@@ -32,13 +32,12 @@ def entrenar_modelo():
     patrones_vec = pipeline.named_steps["tfidf"].transform(X)
     
     model_data = {
-        "pipeline": pipeline,
-        "patrones_vec": patrones_vec
+    "pipeline": pipeline,
+    "patrones_vec": patrones_vec,
+    "patrones_texto": X
     }
-    
+
     joblib.dump(model_data, MODEL_PATH)
-
-
 
 if __name__ == "__main__":
     entrenar_modelo()
