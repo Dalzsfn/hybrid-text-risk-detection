@@ -1,6 +1,6 @@
 # Hybrid Text Risk Detection Engine
 
-Sistema híbrido para la detección y clasificación de patrones de riesgo en textos largos (correos, tickets, documentos PDF y archivos estructurados).
+Sistema híbrido para la detección y clasificación de patrones de riesgo en textos largos.
 
 Proyecto desarrollado inicialmente en el curso **Estructuras de Datos y Algoritmos II (EDA II)** y posteriormente extendido de forma independiente para integrar técnicas de **Machine Learning, similitud semántica y arquitectura cliente-servidor con FastAPI**.
 
