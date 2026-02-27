@@ -3,7 +3,6 @@ import FileUpload from "../components/FileUpload"
 
 function PatternConfig() {
 
-  // ---------- FORM MANUAL ----------
   const [patron, setPatron] = useState("")
   const [categoria, setCategoria] = useState("Reclamo")
   const [alerta, setAlerta] = useState("Medio")
@@ -11,16 +10,13 @@ function PatternConfig() {
   const [mensajeManual, setMensajeManual] = useState(null)
   const [errorManual, setErrorManual] = useState(null)
 
-  // ---------- ARCHIVO ----------
   const [archivo, setArchivo] = useState(null)
   const [mensajeArchivo, setMensajeArchivo] = useState(null)
   const [errorArchivo, setErrorArchivo] = useState(null)
 
-  // ---------- LISTADO ----------
   const [patrones, setPatrones] = useState([])
   const [filtroCategoria, setFiltroCategoria] = useState("Todos")
 
-  // ================== AGREGAR MANUAL ==================
   const agregarPatron = async () => {
     setMensajeManual(null)
     setErrorManual(null)
@@ -57,7 +53,6 @@ function PatternConfig() {
     }
   }
 
-  // ================== CARGAR ARCHIVO ==================
   const subirArchivo = async () => {
     if (!archivo) return
 
@@ -93,7 +88,6 @@ function PatternConfig() {
     setErrorArchivo(null)
   }
 
-  // ================== LISTAR ==================
   const cargarPatrones = async () => {
     try {
       const res = await fetch("http://127.0.0.1:8000/patrones")
@@ -104,7 +98,6 @@ function PatternConfig() {
     }
   }
 
-  // ================== ELIMINAR (por patron) ==================
   const eliminarPatron = async (patron) => {
     if (!confirm("¿Eliminar este patrón?")) return
 

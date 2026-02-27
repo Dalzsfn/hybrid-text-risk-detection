@@ -2,7 +2,6 @@ import time
 from backend.app.algorithms.kmp import find_kmp
 from backend.app.algorithms.boyer_moore import find_boyer_moore
 
-
 def medir_algoritmos(texto, patron, repeticiones=5):
     tiempos_kmp = []
     tiempos_bm = []
@@ -28,20 +27,3 @@ def medir_algoritmos(texto, patron, repeticiones=5):
         "repeticiones": repeticiones
     }
 
-    
-''''
-from medicion import medir_algoritmos
-
-casos = [
-    ("Pésimo servicio, nunca solucionan nada", "pésimo servicio"),
-    ("Si no arreglan hoy, voy a demandar", "voy a demandar"),
-    ("Gracias por la atención", "fraude"),
-]
-
-for texto, patron in casos:
-    r = medir_algoritmos(texto, patron)
-    print("Texto:", texto)
-    print("Patrón:", patron)
-    print("Resultado:", r)
-    print("-" * 40)
-'''

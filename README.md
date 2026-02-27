@@ -1,100 +1,153 @@
 # Hybrid Text Risk Detection Engine
 
-Sistema híbrido para la detección y clasificación de patrones de riesgo en textos largos (correos, tickets, documentos PDF).
+Sistema híbrido para la detección y clasificación de patrones de riesgo en textos largos (correos, tickets, documentos PDF y archivos estructurados).
 
-Proyecto originalmente desarrollado como parte del curso **Estructuras de Datos y Algoritmos II (EDA II)** y posteriormente extendido de forma personal para incorporar técnicas de **Machine Learning y análisis semántico**.
+Proyecto desarrollado inicialmente en el curso **Estructuras de Datos y Algoritmos II (EDA II)** y posteriormente extendido de forma independiente para integrar técnicas de **Machine Learning, similitud semántica y arquitectura cliente-servidor con FastAPI**.
 
 ---
 
 ## Objetivo
 
-Detectar automáticamente patrones de riesgo dentro de textos largos y clasificarlos según su severidad:
+Detectar automáticamente patrones de riesgo dentro de textos extensos y archivos para clasificarlos según su severidad:
 
 - Queja leve  
 - Reclamo  
 - Reclamo crítico  
 - Riesgo legal  
 
-El sistema combina:
-
-- Algoritmos clásicos de Pattern Matching
-- Similitud vectorial (TF-IDF)
-- Clasificación supervisada (Logistic Regression)
+El sistema combina enfoques determinísticos y probabilísticos para lograr mayor robustez.
 
 ---
 
 ## Enfoque híbrido
 
-1️) Segmentación del texto en frases  
-2️) Detección exacta mediante
-* Knuth–Morris–Pratt (KMP)
-* Boyer–Moore (BM)  
+1. Segmentación del texto en frases
 
-3️) Detección aproximada mediante similitud TF-IDF  
-4️) Clasificación de severidad usando Machine Learning  
-5️) Determinación de severidad máxima por documento
+2. Detección exacta mediante:
+    - Knuth–Morris–Pratt (KMP)
+    - Boyer–Moore (BM)
+
+3. Detección aproximada mediante:
+    - Vectorización TF-IDF  
+    - Similitud coseno  
+
+4. Clasificación supervisada:
+    - Logistic Regression  
+
+5. Determinación de severidad máxima por documento  
 
 ---
 
-## Componentes actuales
+## Arquitectura del sistema
+
+Frontend (React)  
+↓  
+API REST (FastAPI)  
+↓  
+Motor híbrido de detección  
+↓  
+Clasificación ML  
+↓  
+Respuesta JSON estructurada  
+
+---
+
+## Componentes técnicos
 
 ### Algoritmos clásicos
 
-- Implementación propia de:
-  - KMP
-  - Boyer–Moore
-- Comparación de tiempos de ejecución
-- Normalización de texto
+- Implementación propia de KMP  
+- Implementación propia de Boyer–Moore  
+- Comparación de tiempos de ejecución  
+- Normalización y limpieza de texto  
 
-### Módulo de Machine Learning (en desarrollo)
+### Machine Learning
 
-- Vectorización TF-IDF
-- Clasificador Logistic Regression
-- Filtrado por similitud coseno
-- Detección por frase en textos largos
+- TF-IDF Vectorizer  
+- Logistic Regression  
+- Similitud coseno para filtrado semántico  
+- Clasificación por frase en textos largos  
 
----
+### Backend
 
-## Arquitectura del proyecto
-
-
-
+- FastAPI  
+- Manejo de archivos (PDF, Excel, CSV)  
+- Endpoint REST `/analizar`  
 
 ---
 
 ## Estado actual
 
-✔ Sistema determinístico funcional (KMP + Boyer–Moore)  
-✔ Detección de múltiples patrones por mensaje  
-✔ Prototipo híbrido para textos largos  
-✔ Clasificación por severidad usando ML  
+✔ Sistema determinístico funcional  
+✔ Detección híbrida exacta + semántica  
+✔ Clasificación por severidad  
+✔ API REST operativa  
+✔ Frontend con separación de coincidencias exactas y aproximadas  
 ⚠ Ajuste fino de thresholds en progreso  
-⚠ Integración completa en módulo productivo pendiente  
+⚠ Migración futura de CSV a base de datos  
+⚠ Dockerización pendiente  
 
 ---
 
-## Motivación técnica
+## Instalación
 
-Los algoritmos clásicos permiten coincidencias exactas eficientes, pero presentan limitaciones ante:
+### 1️) Clonar repositorio
 
-- Variaciones léxicas
-- Reformulaciones
-- Sinónimos
-- Ambigüedad contextual
+```bash
+git clone https://github.com/Dalzsfn/hybrid-text-risk-detection.git
+cd hybrid-text-risk-detection 
+```
 
-La incorporación de similitud vectorial y clasificación supervisada permite extender el sistema hacia un enfoque más robusto y adaptable.
+### 2) Entorno virtual
+
+Crear entorno:
+
+```bash
+python -m venv venv
+```
+
+Activar entorno:
+
+* Windows
+
+```bash
+venv\Scripts\activate
+```
+
+* macOS/Linux
+
+```bash
+source venv/bin/activate
+```
+
+### 3) Instalar dependencias
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4) Ejecutar backend
+
+```bash
+uvicorn backend.api.main_api:app --reload
+```
+
+### 5) Ejecutar frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
 ---
 
 ## Requisitos
 
-- Python 3.12+
-- scikit-learn
-- pandas
-- numpy
+Python 3.12+
 
----
+Node.js (para frontend React)
 
-## Nota
+Dependencias del backend definidas en:
 
-Este repositorio representa la evolución de un proyecto académico hacia un motor híbrido de detección de riesgo basado en reglas y aprendizaje automático, desarrollado como proyecto personal de experimentación y mejora arquitectónica.
+`requirements.txt` 

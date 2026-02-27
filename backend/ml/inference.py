@@ -5,11 +5,9 @@ from backend.ml.model_handler import load_ml_components
 UMBRAL_MODELO = 0.60
 UMBRAL_SIMILITUD = 0.5
 
-
 def segmentar_texto(texto):
     frases = re.split(r'[.!?]\s+', texto)
     return [f.strip() for f in frases if f.strip()]
-
 
 def analizar_texto(texto):
     modelo, vectorizer, patrones_vec, patrones_texto = load_ml_components()

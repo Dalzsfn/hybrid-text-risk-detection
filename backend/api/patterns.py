@@ -1,14 +1,7 @@
 from fastapi import APIRouter, UploadFile, File
 from pydantic import BaseModel
 from urllib.parse import unquote
-
-from backend.utils.pattern_loader import (
-    leer_patrones_csv_base,
-    guardar_patrones,
-    leer_patrones_csv,
-    leer_patrones_excel,
-    leer_patrones_txt
-)
+from backend.utils.pattern_loader import leer_patrones_csv_base,guardar_patrones,leer_patrones_csv,leer_patrones_excel,leer_patrones_txt
 
 router = APIRouter()
 

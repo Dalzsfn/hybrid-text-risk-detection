@@ -7,3 +7,4 @@ openpyxl
 PyPDF2
 scikit-learn
 numpy
+joblib

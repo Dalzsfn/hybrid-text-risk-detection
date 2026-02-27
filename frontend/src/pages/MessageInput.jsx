@@ -45,7 +45,6 @@ function MessageInput() {
     setArchivo(null)
   }
 
-  // 🔹 Separar resultados de forma segura
   const exactos = resultados?.filter(r => r.tipo_match === "exacto") || []
   const aproximados = resultados?.filter(r => r.tipo_match === "aproximado") || []
 
@@ -116,7 +115,7 @@ function MessageInput() {
           {exactos.length > 0 && (
             <div className="space-y-3">
               <h4 className="font-semibold text-md text-blue-700">
-                🔵 Patrones exactos detectados
+                Patrones exactos detectados
               </h4>
 
               {exactos.map((r, i) => (
@@ -134,7 +133,7 @@ function MessageInput() {
           {aproximados.length > 0 && (
             <div className="space-y-3">
               <h4 className="font-semibold text-md text-orange-700">
-                🟠 Posibles patrones detectados
+                Posibles patrones detectados
               </h4>
 
               {aproximados.map((r, i) => (
