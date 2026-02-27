@@ -28,8 +28,11 @@ function MessageInput() {
 
       const data = await res.json()
 
-      if (data.error) setError(data.error)
-      else setResultados(data.resultados)
+      if (data.error) {
+        setError(data.error)
+      } else {
+        setResultados(data.resultados)
+      }
 
     } catch {
       setError("No se pudo conectar con el servidor")
@@ -41,6 +44,10 @@ function MessageInput() {
   const eliminarArchivo = () => {
     setArchivo(null)
   }
+
+  // 🔹 Separar resultados de forma segura
+  const exactos = resultados?.filter(r => r.tipo_match === "exacto") || []
+  const aproximados = resultados?.filter(r => r.tipo_match === "aproximado") || []
 
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-6">
@@ -96,7 +103,7 @@ function MessageInput() {
 
       {/* RESULTADOS */}
       {resultados && (
-        <div className="space-y-3">
+        <div className="space-y-6">
           <h3 className="font-bold text-lg">Resultados</h3>
 
           {resultados.length === 0 && (
@@ -105,14 +112,44 @@ function MessageInput() {
             </p>
           )}
 
-          {resultados.map((r, i) => (
-            <div key={i} className="border rounded p-4 bg-gray-50">
-              <p><b>Patrón:</b> {r.patron}</p>
-              <p><b>Categoría:</b> {r.categoria}</p>
-              <p><b>Alerta:</b> {r.alerta}</p>
-              <p><b>Sugerencia:</b> {r.sugerencia}</p>
+          {/* ================= EXACTOS ================= */}
+          {exactos.length > 0 && (
+            <div className="space-y-3">
+              <h4 className="font-semibold text-md text-blue-700">
+                🔵 Patrones exactos detectados
+              </h4>
+
+              {exactos.map((r, i) => (
+                <div key={i} className="border rounded p-4 bg-blue-50">
+                  <p><b>Patrón:</b> {r.patron}</p>
+                  <p><b>Categoría:</b> {r.categoria}</p>
+                  <p><b>Alerta:</b> {r.alerta}</p>
+                  <p><b>Sugerencia:</b> {r.sugerencia}</p>
+                </div>
+              ))}
             </div>
-          ))}
+          )}
+
+          {/* ================= APROXIMADOS ================= */}
+          {aproximados.length > 0 && (
+            <div className="space-y-3">
+              <h4 className="font-semibold text-md text-orange-700">
+                🟠 Posibles patrones detectados
+              </h4>
+
+              {aproximados.map((r, i) => (
+                <div key={i} className="border rounded p-4 bg-orange-50">
+                  <p><b>Posible patrón:</b> {r.patron}</p>
+                  <p><b>Categoría:</b> {r.categoria}</p>
+                  <p><b>Alerta:</b> {r.alerta}</p>
+                  <p><b>Sugerencia:</b> {r.sugerencia}</p>
+                  <p><b>Confianza patrón:</b> {(r.confianza_patron * 100).toFixed(2)}%</p>
+                  <p><b>Confianza modelo:</b> {(r.confianza_modelo * 100).toFixed(2)}%</p>
+                </div>
+              ))}
+            </div>
+          )}
+
         </div>
       )}
 

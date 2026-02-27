@@ -59,7 +59,7 @@ def analizar_mensaje(mensaje, patrones):
         if r["patron_relacionado"] not in patrones_exactos:
 
             resultados.append({
-                "patron": r["patron_relacionado"],
+                "patron": r["frase"],
                 "categoria": r["categoria"],
                 "alerta": "media",
                 "sugerencia": "Revisar posible coincidencia semántica",
