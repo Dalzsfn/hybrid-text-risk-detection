@@ -1,7 +1,17 @@
+import os
+from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-URL_DATABASE = "postgresql://postgres:admin@localhost:5432/wisecheck"
+load_dotenv()
+
+user = os.getenv("DB_USER")
+password = os.getenv("DB_PASS")
+host = os.getenv("DB_HOST")
+port = os.getenv("DB_PORT")
+database = os.getenv("DB_NAME")
+
+URL_DATABASE = f"postgresql://{user}:{password}@{host}:{port}/{database}"
 
 engine = create_engine(URL_DATABASE)
 
