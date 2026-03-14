@@ -1,0 +1,401 @@
+patron,categoria,nivel_alerta,sugerencia
+iniciare demanda judicial,Riesgo legal,Crítico,Notificar departamento legal
+procedere con acciones legales,Riesgo legal,Crítico,Activar protocolo juridico
+presentare denuncia formal,Riesgo legal,Crítico,Coordinar asesoria legal
+esto constituye fraude,Riesgo legal,Crítico,Escalar a auditoria interna
+incumplimiento contractual evidente,Riesgo legal,Crítico,Revisar contrato firmado
+danos y perjuicios reclamados,Riesgo legal,Crítico,Derivar a departamento legal
+exigire indemnizacion legal,Riesgo legal,Crítico,Activar defensa juridica
+acudire a defensa del consumidor,Riesgo legal,Crítico,Coordinar respuesta legal
+esto viola mis derechos legales,Riesgo legal,Crítico,Revisar marco normativo
+negligencia comprobable,Riesgo legal,Crítico,Escalar caso juridico
+responsabilidad civil evidente,Riesgo legal,Crítico,Evaluar impacto legal
+demanda formal en proceso,Riesgo legal,Crítico,Preparar documentacion legal
+denuncia ante autoridades,Riesgo legal,Crítico,Escalar juridicamente
+fraude sistematico,Riesgo legal,Crítico,Iniciar auditoria urgente
+acciones judiciales inmediatas,Riesgo legal,Crítico,Coordinar defensa legal
+reclamacion legal formal,Riesgo legal,Crítico,Notificar asesoria juridica
+incumplimiento grave de contrato,Riesgo legal,Crítico,Revisar clausulas contractuales
+acusacion de estafa,Riesgo legal,Crítico,Activar protocolo legal inmediato
+proceso legal en curso,Riesgo legal,Crítico,Escalar a direccion juridica
+evaluare demanda colectiva,Riesgo legal,Crítico,Preparar estrategia legal
+esto infringe la normativa vigente,Riesgo legal,Crítico,Revisar cumplimiento regulatorio
+se vulneraron mis derechos como consumidor,Riesgo legal,Crítico,Coordinar respuesta legal
+habra consecuencias legales por esto,Riesgo legal,Crítico,Activar defensa juridica
+interpondre una denuncia formal,Riesgo legal,Crítico,Notificar area juridica
+hay responsabilidad legal en este caso,Riesgo legal,Crítico,Escalar a direccion juridica
+considero que existe fraude en esta operacion,Riesgo legal,Crítico,Iniciar auditoria interna
+esto es una violacion contractual,Riesgo legal,Crítico,Revisar clausulas firmadas
+tomare medidas judiciales inmediatas,Riesgo legal,Crítico,Activar protocolo juridico
+esto constituye un incumplimiento legal,Riesgo legal,Crítico,Escalar a departamento legal
+acusare fraude,Riesgo legal,Crítico,Activar protocolo de auditoria
+acudire a instancias legales,Riesgo legal,Crítico,Notificar al area juridica
+esto es negligencia,Riesgo legal,Crítico,Escalar a departamento legal
+responsabilidad legal evidente,Riesgo legal,Crítico,Revisar implicaciones contractuales
+citacion legal pendiente,Riesgo legal,Crítico,Preparar defensa legal
+aviso de litigio,Riesgo legal,Crítico,Notificar a socios
+querella criminal en preparacion,Riesgo legal,Crítico,Derivar a penal
+violacion de terminos y condiciones,Riesgo legal,Crítico,Revisar politicas
+rescision de contrato por incumplimiento,Riesgo legal,Crítico,Liquidar contrato
+peritaje legal solicitado,Riesgo legal,Crítico,Contratar experto
+malversacion de fondos detectada,Riesgo legal,Crítico,Denuncia penal
+publicidad engañosa demostrable,Riesgo legal,Crítico,Revisar marketing
+acoso comercial sistematico,Riesgo legal,Crítico,Cesar comunicaciones
+infraccion de la ley de proteccion de datos,Riesgo legal,Crítico,Reportar a autoridad
+coaccion detectada,Riesgo legal,Crítico,Investigacion interna
+contrato nulo de pleno derecho,Riesgo legal,Crítico,Anular servicios
+reclamacion previa a la via judicial,Riesgo legal,Crítico,Intentar conciliacion
+arbitraje de consumo solicitado,Riesgo legal,Crítico,Preparar alegatos
+vulneracion de clausulas abusivas,Riesgo legal,Crítico,Modificar contratos
+estafa agravada,Riesgo legal,Crítico,Accion legal urgente
+delito contra el patrimonio,Riesgo legal,Crítico,Notificar policia
+servicio totalmente inaceptable,Reclamo crítico,Alto,Escalar a gerencia inmediata
+esto es inadmisible,Reclamo crítico,Alto,Asignar supervisor senior
+exijo solucion inmediata,Reclamo crítico,Alto,Priorizar resolucion urgente
+no tolerare este trato,Reclamo crítico,Alto,Escalar a coordinacion
+estoy extremadamente molesto,Reclamo crítico,Alto,Contactar cliente urgente
+quiero respuesta inmediata,Reclamo crítico,Alto,Responder en menos de 24 horas
+esto es una verguenza absoluta,Reclamo crítico,Alto,Escalar a direccion
+cancelare mi contrato hoy,Reclamo crítico,Alto,Activar protocolo de retencion
+procedere a cancelar el servicio,Reclamo crítico,Alto,Ofrecer beneficios urgentes
+ultima advertencia antes de cancelar,Reclamo crítico,Alto,Contactar cliente prioritario
+hare publico mi descontento,Reclamo crítico,Alto,Gestionar riesgo reputacional
+difundire esta mala experiencia,Reclamo crítico,Alto,Contactar antes de impacto
+exijo compensacion inmediata,Reclamo crítico,Alto,Evaluar compensacion urgente
+esto es abuso al consumidor,Reclamo crítico,Alto,Escalar a area legal preventiva
+trato indignante,Reclamo crítico,Alto,Revisar conducta del personal
+necesito solucion ahora mismo,Reclamo crítico,Alto,Asignar agente dedicado
+no aceptare excusas,Reclamo crítico,Alto,Escalar a gerencia operativa
+situacion insostenible,Reclamo crítico,Alto,Revisar caso prioritario
+me siento completamente estafado,Reclamo crítico,Alto,Escalar investigacion interna
+experiencia desastrosa,Reclamo crítico,Alto,Implementar mejora inmediata
+servicio deplorable constante,Reclamo crítico,Alto,Auditoria operativa urgente
+esto es el colmo,Reclamo crítico,Alto,Asignar supervisor responsable
+necesito solucion definitiva,Reclamo crítico,Alto,Seguimiento diario del caso
+cancelacion inmediata solicitada,Reclamo crítico,Alto,Activar retencion avanzada
+este es el peor servicio recibido,Reclamo crítico,Alto,Revisar procesos internos
+no continuare con ustedes,Reclamo crítico,Alto,Contactar cliente para retencion
+estoy muy indignado,Reclamo crítico,Alto,Contactar al cliente de inmediato
+me siento totalmente ignorado,Reclamo crítico,Alto,Asignar agente dedicado
+publicare esto en redes,Reclamo crítico,Alto,Contactar antes de impacto reputacional
+esto llegara a oidos de todos,Reclamo crítico,Alto,Gabinete de crisis
+trato degradante,Reclamo crítico,Alto,Sancion administrativa interna
+pesima gestion de mi caso,Reclamo crítico,Alto,Reasignar a senior
+negligencia en el servicio,Reclamo crítico,Alto,Revision de procesos
+incompetencia total del personal,Reclamo crítico,Alto,Capacitacion urgente
+servicio nefasto y caro,Reclamo crítico,Alto,Revisar precios vs calidad
+pesadilla de atencion al cliente,Reclamo crítico,Alto,Disculpa institucional
+quiero hablar con un gerente urgente,Reclamo crítico,Alto,Llamada de gerencia
+escalacion inmediata solicitada,Reclamo crítico,Alto,Seguir protocolo nivel 3
+no hay perdon para este error,Reclamo crítico,Alto,Compensacion excepcional
+esto arruino mis planes,Reclamo crítico,Alto,Empatia y solucion tecnica
+perjuicio economico critico,Reclamo crítico,Alto,Evaluar daño emergente
+respuesta inaceptable del soporte,Reclamo crítico,Alto,Control de calidad
+abandono total del cliente,Reclamo crítico,Alto,Recuperar contacto hoy
+burla sistemática a mis reclamos,Reclamo crítico,Alto,Investigar historial
+exijo restitucion total ahora,Reclamo crítico,Alto,Procesar reembolso
+no me movere hasta que solucionen,Reclamo crítico,Alto,Presencia de supervisor
+esto es un desastre operativo,Reclamo crítico,Alto,Auditoria de flujo
+falta de respeto absoluta,Reclamo crítico,Alto,Medidas disciplinarias
+ineficiencia cronica,Reclamo crítico,Alto,Reingenieria de servicio
+robo descarado en el servicio,Reclamo crítico,Alto,Investigacion antifraude
+producto en mal estado,Reclamo,Medio,Ofrecer reemplazo
+error en facturacion,Reclamo,Medio,Revisar factura
+cobro indebido realizado,Reclamo,Medio,Validar transaccion
+servicio interrumpido,Reclamo,Medio,Revisar continuidad
+aplicacion no funciona,Reclamo,Medio,Escalar a soporte tecnico
+fallas constantes del sistema,Reclamo,Medio,Investigar causa raiz
+entrega fuera de plazo,Reclamo,Medio,Revisar tiempos logistica
+producto incorrecto enviado,Reclamo,Medio,Coordinar cambio
+respuesta insuficiente,Reclamo,Medio,Asignar nuevo agente
+falta de seguimiento,Reclamo,Medio,Escalar internamente
+problema sin resolver,Reclamo,Medio,Reasignar caso
+demora en respuesta,Reclamo,Medio,Optimizar tiempos
+informacion incorrecta brindada,Reclamo,Medio,Revisar capacitacion
+sistema presenta errores,Reclamo,Medio,Escalar a tecnología
+servicio inconsistente,Reclamo,Medio,Revisar operacion
+retraso en soporte tecnico,Reclamo,Medio,Asignar equipo especializado
+problema recurrente,Reclamo,Medio,Auditoria interna
+atencion ineficiente,Reclamo,Medio,Revisar calidad
+reclamo urgente,Reclamo,Medio,Asignar prioridad media
+necesito solucion pronta,Reclamo,Medio,Responder en 48 horas
+aun no tengo respuesta,Reclamo,Medio,Verificar estado del caso
+siguen sin responder,Reclamo,Medio,Escalar internamente
+no cumplen lo prometido,Reclamo,Medio,Revisar compromiso comercial
+incumplieron el acuerdo,Reclamo,Medio,Verificar condiciones pactadas
+el producto llego dañado,Reclamo,Medio,Ofrecer reemplazo inmediato
+me cobraron de mas,Reclamo,Medio,Validar transaccion
+cobro duplicado,Reclamo,Medio,Procesar devolucion
+mala calidad constante,Reclamo,Medio,Revisar control de calidad
+fallas repetitivas,Reclamo,Medio,Investigar causa raiz
+problemas frecuentes,Reclamo,Medio,Escalar a soporte tecnico
+error constante del sistema,Reclamo,Medio,Revisar area tecnica
+aplicacion falla mucho,Reclamo,Medio,Asignar equipo tecnico
+interrupciones constantes,Reclamo,Medio,Investigar infraestructura
+caida del servicio,Reclamo,Medio,Escalar a operaciones
+trato irrespetuoso,Reclamo,Medio,Escalar a recursos humanos
+personal grosero,Reclamo,Medio,Capacitar equipo de atencion
+falta de profesionalismo,Reclamo,Medio,Implementar capacitacion
+retraso en la entrega del pedido,Reclamo,Medio,Revisar logistica
+soporte tecnico no resuelve,Reclamo,Medio,Asignar tecnico especializado
+pedido incompleto recibido,Reclamo,Medio,Enviar faltante
+cargo no reconocido en tarjeta,Reclamo,Medio,Investigar fraude
+suscripcion no cancelada correctamente,Reclamo,Medio,Baja manual
+horario de entrega no respetado,Reclamo,Medio,Ajustar rutas
+dificultad para contactar soporte,Reclamo,Medio,Mejorar canales
+web no carga correctamente,Reclamo,Medio,Revision de servidor
+error de sincronizacion de cuenta,Reclamo,Medio,Soporte de datos
+cambio de condiciones sin aviso,Reclamo,Medio,Comunicacion legal
+promocion no aplicada,Reclamo,Medio,Aplicar descuento retroactivo
+bono de descuento invalido,Reclamo,Medio,Generar nuevo codigo
+devolucion no procesada,Reclamo,Medio,Acelerar pago
+servicio regular,Queja leve,Bajo,Enviar encuesta
+no fue lo esperado,Queja leve,Bajo,Solicitar retroalimentacion
+experiencia mejorable,Queja leve,Bajo,Revisar procesos
+demora leve en respuesta,Queja leve,Bajo,Optimizar tiempos
+precio algo elevado,Queja leve,Bajo,Evaluar promociones
+atencion poco cordial,Queja leve,Bajo,Capacitar personal
+esperaba mas calidad,Queja leve,Bajo,Analizar producto
+informacion poco clara,Queja leve,Bajo,Mejorar comunicacion
+ligero inconveniente,Queja leve,Bajo,Contactar cliente
+tiempo de espera largo,Queja leve,Bajo,Revisar operacion
+servicio podria mejorar,Queja leve,Bajo,Implementar mejoras
+trato mejorable,Queja leve,Bajo,Capacitar equipo
+pequeño error en pedido,Queja leve,Bajo,Verificar proceso
+experiencia neutral,Queja leve,Bajo,Enviar encuesta
+precio elevado comparado,Queja leve,Bajo,Revisar mercado
+respuesta generica,Queja leve,Bajo,Personalizar atencion
+leve insatisfaccion,Queja leve,Bajo,Contactar cliente
+detalle no satisfactorio,Queja leve,Bajo,Revisar proceso
+no estoy conforme,Queja leve,Bajo,Contactar para mejorar
+esperaba algo mejor,Queja leve,Bajo,Revisar expectativas
+atencion lenta,Queja leve,Bajo,Optimizar tiempos
+demora excesiva,Queja leve,Bajo,Revisar tiempos operativos
+tardan demasiado,Queja leve,Bajo,Mejorar procesos internos
+experiencia decepcionante,Queja leve,Bajo,Ofrecer disculpas
+trato poco amable,Queja leve,Bajo,Capacitar al personal
+atencion poco profesional,Queja leve,Bajo,Reforzar entrenamiento
+precio injustificado,Queja leve,Bajo,Revisar politica de precios
+tarifa elevada,Queja leve,Bajo,Evaluar competitividad
+costos excesivos,Queja leve,Bajo,Analizar estructura tarifaria
+servicio funcional pero simple,Queja leve,Bajo,Evaluar mejoras
+ligera insatisfaccion general,Queja leve,Bajo,Realizar seguimiento
+cumple pero sin destacar,Queja leve,Bajo,Revisar propuesta
+esperaba mayor rapidez,Queja leve,Bajo,Optimizar procesos
+respuesta algo lenta,Queja leve,Bajo,Mejorar agilidad
+personal distraido,Queja leve,Bajo,Supervision de equipo
+local un poco sucio,Queja leve,Bajo,Reforzar limpieza
+musica muy alta,Queja leve,Bajo,Ajustar volumen
+falta de opciones en menu,Queja leve,Bajo,Añadir variedad
+presentacion mejorable,Queja leve,Bajo,Cuidar estetica
+empaque algo dañado,Queja leve,Bajo,Revisar embalaje
+fila muy larga para pagar,Queja leve,Bajo,Abrir mas cajas
+falta de stock ocasional,Queja leve,Bajo,Mejorar inventario
+plataforma poco intuitiva,Queja leve,Bajo,UX review
+diseño anticuado,Queja leve,Bajo,Rediseño visual
+proceso algo burocratico,Queja leve,Bajo,Simplificar pasos
+confirmacion tardia,Queja leve,Bajo,Automatizar avisos
+correo de spam frecuente,Queja leve,Bajo,Ajustar frecuencia
+notificaciones molestas,Queja leve,Bajo,Personalizar alertas
+aplicacion un poco lenta,Queja leve,Bajo,Optimizar codigo
+actualizacion confusa,Queja leve,Bajo,Guias de usuario
+iniciare acciones legales contra la empresa,Riesgo legal,Crítico,Notificar departamento legal
+esto es una estafa legalmente denunciable,Riesgo legal,Crítico,Activar protocolo juridico
+mis abogados se encargaran de este asunto,Riesgo legal,Crítico,Coordinar asesoria legal
+violaron los terminos del contrato firmado,Riesgo legal,Crítico,Escalar a auditoria interna
+exijo hablar con el departamento juridico,Riesgo legal,Crítico,Revisar contrato firmado
+esto acabara en los tribunales de justicia,Riesgo legal,Crítico,Derivar a departamento legal
+presentare una demanda por daños y perjuicios,Riesgo legal,Crítico,Activar defensa juridica
+el contrato es nulo por falta de transparencia,Riesgo legal,Crítico,Coordinar respuesta legal
+tengo pruebas de publicidad engañosa grave,Riesgo legal,Crítico,Revisar marco normativo
+acusare negligencia profesional ante el juez,Riesgo legal,Crítico,Escalar caso juridico
+esto es una violacion a la ley de proteccion al consumidor,Riesgo legal,Crítico,Evaluar impacto legal
+recibiran una citacion judicial proximamente,Riesgo legal,Crítico,Preparar documentacion legal
+procederemos con una demanda colectiva,Riesgo legal,Crítico,Escalar juridicamente
+han incurrido en un delito de apropiacion indebida,Riesgo legal,Crítico,Iniciar auditoria urgente
+solicito el arbitraje de consumo de inmediato,Riesgo legal,Crítico,Coordinar defensa legal
+esta clausula es abusiva y nula,Riesgo legal,Crítico,Notificar asesoria juridica
+incumplieron los plazos legales de desistimiento,Riesgo legal,Crítico,Revisar clausulas contractuales
+esto es un fraude organizado contra clientes,Riesgo legal,Crítico,Activar protocolo legal inmediato
+exijo copia de mi contrato para iniciar juicio,Riesgo legal,Crítico,Escalar a direccion juridica
+han vulnerado mis derechos fundamentales como usuario,Riesgo legal,Crítico,Preparar estrategia legal
+denunciare este cobro ante la autoridad financiera,Riesgo legal,Crítico,Revisar cumplimiento regulatorio
+no respetaron mi derecho a la privacidad de datos,Riesgo legal,Crítico,Coordinar respuesta legal
+esto constituye una estafa procesal,Riesgo legal,Crítico,Activar defensa juridica
+el peritaje demuestra su responsabilidad civil,Riesgo legal,Crítico,Notificar area juridica
+el servicio contratado difiere de lo legalmente pactado,Riesgo legal,Crítico,Escalar a direccion juridica
+presentare una querella criminal por estafa,Riesgo legal,Crítico,Iniciar auditoria interna
+han ignorado mis derechos de retracto legal,Riesgo legal,Crítico,Revisar clausulas firmadas
+esto es una falta grave contra la fe publica,Riesgo legal,Crítico,Activar protocolo juridico
+solicito la rescision de contrato por incumplimiento grave,Riesgo legal,Crítico,Escalar a departamento legal
+su conducta es tipificada como acoso mercantil,Riesgo legal,Crítico,Activar protocolo de auditoria
+tomare represalias legales por este trato,Riesgo legal,Crítico,Notificar al area juridica
+ustedes han falsificado mi consentimiento contractual,Riesgo legal,Crítico,Escalar a departamento legal
+esto viola la normativa de seguridad vigente,Riesgo legal,Crítico,Revisar implicaciones contractuales
+exijo indemnizacion por lucro cesante,Riesgo legal,Crítico,Preparar defensa legal
+no cumplieron con la garantia legal obligatoria,Riesgo legal,Crítico,Notificar a socios
+esto llegara hasta la corte suprema si es necesario,Riesgo legal,Crítico,Derivar a penal
+su empresa opera fuera del marco legal,Riesgo legal,Crítico,Revisar politicas
+han robado mis datos personales de forma ilegal,Riesgo legal,Crítico,Liquidar contrato
+tengo grabaciones que prueban su estafa,Riesgo legal,Crítico,Contratar experto
+procederemos a embargar sus cuentas por impago de deuda,Riesgo legal,Crítico,Denuncia penal
+esta es una reclamacion previa a via ejecutiva,Riesgo legal,Crítico,Revisar marketing
+su falta de respuesta es una infraccion administrativa,Riesgo legal,Crítico,Cesar comunicaciones
+el contrato carece de validez juridica,Riesgo legal,Crítico,Reportar a autoridad
+exijo la devolucion de mi dinero bajo amparo legal,Riesgo legal,Crítico,Investigacion interna
+denunciare este abuso ante la fiscalia,Riesgo legal,Crítico,Anular servicios
+han violado el secreto profesional,Riesgo legal,Crítico,Intentar conciliacion
+su sistema es un esquema de fraude masivo,Riesgo legal,Crítico,Preparar alegatos
+el daño causado es irreparable y judicializable,Riesgo legal,Crítico,Modificar contratos
+tienen 24 horas antes de que mis abogados actuen,Riesgo legal,Crítico,Accion legal urgente
+la fiscalia tomara cartas en este asunto,Riesgo legal,Crítico,Notificar policia
+es el servicio mas lamentable que he pagado jamas,Reclamo crítico,Alto,Escalar a gerencia inmediata
+exijo una solucion hoy o cancelo todo definitivamente,Reclamo crítico,Alto,Asignar supervisor senior
+me han robado mi tiempo y mi dinero de forma descarada,Reclamo crítico,Alto,Priorizar resolucion urgente
+su incompetencia es de un nivel alarmante,Reclamo crítico,Alto,Escalar a coordinacion
+estoy harto de sus mentiras y falta de respeto,Reclamo crítico,Alto,Contactar cliente urgente
+quiero la baja inmediata y el reembolso total ahora,Reclamo crítico,Alto,Responder en menos de 24 horas
+esto es una burla sangrienta al cliente,Reclamo crítico,Alto,Escalar a direccion
+no voy a parar hasta que alguien responsable me llame,Reclamo crítico,Alto,Activar protocolo de retencion
+es una verguenza como tratan a los usuarios antiguos,Reclamo crítico,Alto,Ofrecer beneficios urgentes
+su atencion al cliente es un insulto a la inteligencia,Reclamo crítico,Alto,Contactar cliente prioritario
+me siento estafado y ninguneado por su empresa,Reclamo crítico,Alto,Gestionar riesgo reputacional
+exijo una disculpa publica y una compensacion real,Reclamo crítico,Alto,Contactar antes de impacto
+ustedes son unos estafadores profesionales,Reclamo crítico,Alto,Evaluar compensacion urgente
+esto es lo mas ineficiente que he visto en mi vida,Reclamo crítico,Alto,Escalar a area legal preventiva
+nadie soluciona nada y me pasan de un lado a otro,Reclamo crítico,Alto,Revisar conducta del personal
+su servicio tecnico no tiene idea de lo que hace,Reclamo crítico,Alto,Asignar agente dedicado
+he perdido muchisimo dinero por su culpa,Reclamo crítico,Alto,Escalar a gerencia operativa
+exijo que un director se ponga en contacto conmigo,Reclamo crítico,Alto,Revisar caso prioritario
+esto es denunciable en todas las redes sociales,Reclamo crítico,Alto,Escalar investigacion interna
+su falta de profesionalidad es asquerosa,Reclamo crítico,Alto,Implementar mejora inmediata
+nunca habia recibido un trato tan denigrante,Reclamo crítico,Alto,Auditoria operativa urgente
+su empresa es un caos absoluto y desorganizado,Reclamo crítico,Alto,Asignar supervisor responsable
+me voy a la competencia hoy mismo sin falta,Reclamo crítico,Alto,Seguimiento diario del caso
+son unos ineptos de pies a cabeza,Reclamo crítico,Alto,Activar retencion avanzada
+exijo que se me devuelva hasta el ultimo centavo,Reclamo crítico,Alto,Revisar procesos internos
+esto es el fin de mi relacion con su marca,Reclamo crítico,Alto,Contactar cliente para retencion
+estoy furioso con el trato recibido por su agente,Reclamo crítico,Alto,Contactar al cliente de inmediato
+es una falta de etica lo que estan haciendo,Reclamo crítico,Alto,Asignar agente dedicado
+su soporte es una pared de ladrillos inútil,Reclamo crítico,Alto,Contactar antes de impacto reputacional
+estoy viviendo una pesadilla con su servicio tecnico,Reclamo crítico,Alto,Gabinete de crisis
+me han dejado sin servicio en el momento mas critico,Reclamo crítico,Alto,Sancion administrativa interna
+esto es un ultraje al derecho del consumidor,Reclamo crítico,Alto,Reasignar a senior
+no tienen verguenza ninguna al cobrar este precio,Reclamo crítico,Alto,Revision de procesos
+su sistema de gestion es basura pura,Reclamo crítico,Alto,Capacitacion urgente
+exijo una auditoria de mi caso inmediatamente,Reclamo crítico,Alto,Revisar precios vs calidad
+han destrozado mi confianza en esta marca,Reclamo crítico,Alto,Disculpa institucional
+ustedes juegan con el dinero de la gente,Reclamo crítico,Alto,Llamada de gerencia
+es una gestion nefasta y vergonzosa,Reclamo crítico,Alto,Seguir protocolo nivel 3
+estoy decepcionado a un nivel que no pueden imaginar,Reclamo crítico,Alto,Compensacion excepcional
+exijo una respuesta coherente en este mismo instante,Reclamo crítico,Alto,Empatia y solucion tecnica
+su empresa deberia estar cerrada por mal servicio,Reclamo crítico,Alto,Evaluar daño emergente
+me han mentido repetidamente sobre la solucion,Reclamo crítico,Alto,Control de calidad
+esto es el colmo de la mala educacion,Reclamo crítico,Alto,Recuperar contacto hoy
+quiero escalar este reclamo al nivel mas alto posible,Reclamo crítico,Alto,Investigar historial
+su atencion es una perdida de tiempo total,Reclamo crítico,Alto,Procesar reembolso
+estoy indignado con la respuesta tan mediocre,Reclamo crítico,Alto,Presencia de supervisor
+son lo peor que le ha pasado al mercado nacional,Reclamo crítico,Alto,Auditoria de flujo
+exijo mi dinero de vuelta y daños y perjuicios,Reclamo crítico,Alto,Medidas disciplinarias
+su personal no tiene ni un minimo de empatia,Reclamo crítico,Alto,Reingenieria de servicio
+esto es una gestion asquerosa del problema,Reclamo crítico,Alto,Investigacion antifraude
+el pedido llego golpeado y abierto,Reclamo,Medio,Ofrecer reemplazo
+la factura tiene un cargo extra que no reconozco,Reclamo,Medio,Revisar factura
+no puedo acceder a mi cuenta desde ayer,Reclamo,Medio,Validar transaccion
+la velocidad del servicio es mucho menor a la contratada,Reclamo,Medio,Revisar continuidad
+el tecnico nunca llego a la cita programada,Reclamo,Medio,Escalar a soporte tecnico
+mi paquete aparece como entregado pero no lo tengo,Reclamo,Medio,Investigar causa raiz
+la aplicacion se cierra sola cada vez que la abro,Reclamo,Medio,Revisar tiempos logistica
+me enviaron una talla diferente a la que pedi,Reclamo,Medio,Coordinar cambio
+el soporte por chat es demasiado lento hoy,Reclamo,Medio,Asignar nuevo agente
+no han actualizado el estado de mi reclamo inicial,Reclamo,Medio,Escalar internamente
+la señal se corta cada vez que llueve,Reclamo,Medio,Reasignar caso
+el precio en la web no coincide con el cobro,Reclamo,Medio,Optimizar tiempos
+tengo problemas para configurar el nuevo equipo,Reclamo,Medio,Revisar capacitacion
+el enlace de pago no funciona correctamente,Reclamo,Medio,Escalar a tecnología
+me prometieron un descuento que no aparece,Reclamo,Medio,Revisar operacion
+el producto dejo de funcionar a los dos dias,Reclamo,Medio,Asignar equipo especializado
+el personal de la tienda fue muy descortés conmigo,Reclamo,Medio,Auditoria interna
+llevo una semana esperando la pieza de repuesto,Reclamo,Medio,Revisar calidad
+el servicio es muy inestable durante las mañanas,Reclamo,Medio,Asignar prioridad media
+no puedo cancelar la renovacion automatica,Reclamo,Medio,Responder en 48 horas
+me siguen llamando para cobrar algo que ya pague,Reclamo,Medio,Verificar estado del caso
+el correo de confirmacion nunca llego a mi bandeja,Reclamo,Medio,Escalar internamente
+la caja llego mojada y el producto dañado,Reclamo,Medio,Revisar compromiso comercial
+mi tarjeta fue rechazada pero el banco dice que esta ok,Reclamo,Medio,Verificar condiciones pactadas
+el servicio de instalacion fue muy desprolijo,Reclamo,Medio,Ofrecer reemplazo inmediato
+me cobraron dos veces la misma suscripcion,Reclamo,Medio,Validar transaccion
+el seguimiento del envio no funciona en la web,Reclamo,Medio,Procesar devolucion
+la calidad del material es inferior a lo prometido,Reclamo,Medio,Revisar control de calidad
+la bateria no dura ni la mitad de lo que dice el manual,Reclamo,Medio,Investigar causa raiz
+el sistema me saca de la sesion constantemente,Reclamo,Medio,Escalar a soporte tecnico
+el color del producto es totalmente diferente al de la foto,Reclamo,Medio,Revisar area tecnica
+la atencion telefonica me dejo en espera 40 minutos,Reclamo,Medio,Asignar equipo tecnico
+el reembolso que prometieron aun no se refleja,Reclamo,Medio,Investigar infraestructura
+no recibi el codigo de descuento por mi compra,Reclamo,Medio,Escalar a operaciones
+la interfaz de la app es muy confusa y da errores,Reclamo,Medio,Escalar a recursos humanos
+el tecnico me rompio algo mientras instalaba,Reclamo,Medio,Capacitar equipo de atencion
+el producto tiene un olor extraño y parece usado,Reclamo,Medio,Implementar capacitacion
+el proceso de devolucion es un dolor de cabeza,Reclamo,Medio,Revisar logistica
+no encuentro donde poner la queja oficial en su web,Reclamo,Medio,Asignar tecnico especializado
+la suscripcion se activo sin mi permiso,Reclamo,Medio,Enviar faltante
+el servicio no cubre la zona que me dijeron,Reclamo,Medio,Investigar fraude
+me dieron informacion contradictoria tres veces,Reclamo,Medio,Baja manual
+la pantalla vino con un pixel muerto de fabrica,Reclamo,Medio,Ajustar rutas
+el servicio de limpieza no paso hoy por mi oficina,Reclamo,Medio,Mejorar canales
+los alimentos llegaron frios y en mal estado,Reclamo,Medio,Revision de servidor
+el reporte de errores no envia los datos,Reclamo,Medio,Soporte de datos
+la contraseña no se puede restablecer nunca,Reclamo,Medio,Comunicacion legal
+el soporte tecnico cerro mi ticket sin avisarme,Reclamo,Medio,Aplicar descuento retroactivo
+no me deja subir los documentos requeridos,Reclamo,Medio,Generar nuevo codigo
+el repartidor fue grosero al entregar el paquete,Reclamo,Medio,Acelerar pago
+la atencion fue aceptable pero podria ser mas rapida,Queja leve,Bajo,Enviar encuesta
+el diseño de la tienda es un poco incomodo para caminar,Queja leve,Bajo,Solicitar retroalimentacion
+esperaba una mejor calidad por el precio que pague,Queja leve,Bajo,Revisar procesos
+el café estaba un poco tibio cuando lo sirvieron,Queja leve,Bajo,Optimizar tiempos
+la musica del local estaba demasiado fuerte hoy,Queja leve,Bajo,Evaluar promociones
+el proceso de pago fue un poco lento por la fila,Queja leve,Bajo,Capacitar personal
+no habia suficientes bolsas en el supermercado,Queja leve,Bajo,Analizar producto
+la pagina web tarda un poco en cargar las imagenes,Queja leve,Bajo,Mejorar comunicacion
+el personal parecia un poco distraído hoy,Queja leve,Bajo,Contactar cliente
+me gustaria que tuvieran mas opciones vegetarianas,Queja leve,Bajo,Revisar operacion
+el empaque del regalo no era muy bonito,Queja leve,Bajo,Implementar mejoras
+la aplicacion consume mucha bateria en mi movil,Queja leve,Bajo,Capacitar equipo
+el aire acondicionado estaba demasiado frio,Queja leve,Bajo,Verificar proceso
+falta un poco de señal en el estacionamiento,Queja leve,Bajo,Enviar encuesta
+el catalogo no esta muy actualizado este mes,Queja leve,Bajo,Revisar mercado
+la respuesta del bot fue un poco repetitiva,Queja leve,Bajo,Personalizar atencion
+el horario de cierre es un poco temprano para mi,Queja leve,Bajo,Contactar cliente
+el jabon del baño se habia terminado,Queja leve,Bajo,Revisar proceso
+la iluminacion del local es un poco escasa,Queja leve,Bajo,Contactar para mejorar
+el estacionamiento es un poco estrecho,Queja leve,Bajo,Revisar expectativas
+los precios han subido un poco ultimamente,Queja leve,Bajo,Optimizar tiempos de respuesta
+la confirmacion del pedido tardo unas horas,Queja leve,Bajo,Revisar tiempos operativos
+me gustaria que el envio fuera un poco mas economico,Queja leve,Bajo,Mejorar procesos internos
+la caja del producto venia un poco rayada,Queja leve,Bajo,Ofrecer disculpas
+el servicio de limpieza podria ser mas detallista,Queja leve,Bajo,Capacitar al personal
+la textura de la tela no es exactamente como pensaba,Queja leve,Bajo,Reforzar entrenamiento
+el sabor ha cambiado un poco respecto a antes,Queja leve,Bajo,Revisar politica de precios
+la aplicacion me pide actualizar muy seguido,Queja leve,Bajo,Evaluar competitividad
+no me gusta que pidan tantos datos para el registro,Queja leve,Bajo,Analizar estructura tarifaria
+el color es un tono mas oscuro que en la web,Queja leve,Bajo,Evaluar mejoras
+la espera en el chat fue de unos 5 minutos,Queja leve,Bajo,Realizar seguimiento
+los asientos de la espera no son muy comodos,Queja leve,Bajo,Revisar propuesta
+falta un poco de variedad en los postres,Queja leve,Bajo,Optimizar procesos
+el sistema de puntos es un poco dificil de entender,Queja leve,Bajo,Mejorar agilidad
+la chica que me atendio no sonreia mucho,Queja leve,Bajo,Supervision de equipo
+el folleto tenia letra muy pequeña,Queja leve,Bajo,Reforzar limpieza
+se demoraron un poco en traerme la cuenta,Queja leve,Bajo,Ajustar volumen
+el aroma del local es un poco fuerte para mi,Queja leve,Bajo,Añadir variedad
+la bolsa de plastico es un poco debil,Queja leve,Bajo,Cuidar estetica
+el boton de ayuda es dificil de encontrar en la app,Queja leve,Bajo,Revisar embalaje
+me gustaria que tuvieran mas metodos de pago,Queja leve,Bajo,Abrir mas cajas
+el ticket de compra salio con la tinta borrosa,Queja leve,Bajo,Mejorar inventario
+el sitio web no tiene modo oscuro,Queja leve,Bajo,UX review
+me enviaron demasiados correos de publicidad hoy,Queja leve,Bajo,Rediseño visual
+la entrega se retraso apenas media hora,Queja leve,Bajo,Simplificar pasos
+el personal de seguridad fue un poco seco,Queja leve,Bajo,Automatizar avisos
+la fruta no estaba tan madura como queria,Queja leve,Bajo,Ajustar frecuencia
+el agua de cortesia estaba a temperatura ambiente,Queja leve,Bajo,Personalizar alertas
+el proceso de devolucion requiere muchos pasos,Queja leve,Bajo,Optimizar codigo
+la llamada se escuchaba con un poco de eco,Queja leve,Bajo,Guias de usuario
