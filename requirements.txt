@@ -8,3 +8,5 @@ PyPDF2
 scikit-learn
 numpy
 joblib
+sqlalchemy
+psycopg2-binary

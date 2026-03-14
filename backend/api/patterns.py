@@ -1,7 +1,7 @@
 from fastapi import APIRouter, UploadFile, File
 from pydantic import BaseModel
-from urllib.parse import unquote
 from backend.utils.pattern_loader import leer_patrones_csv_base,guardar_patrones,leer_patrones_csv,leer_patrones_excel,leer_patrones_txt
+from backend.database.queries import get_patterns, add_pattern, delete_pattern
 
 router = APIRouter()
 
@@ -14,34 +14,23 @@ class PatronEntrada(BaseModel):
 
 @router.get("/patrones")
 def obtener_patrones():
-    return leer_patrones_csv_base()
+    return get_patterns()
 
 
 @router.post("/patrones")
 def agregar_patron(patron: PatronEntrada):
-    patrones = leer_patrones_csv_base()
+    patrones = get_patterns()
 
     if any(p["patron"] == patron.patron for p in patrones):
         return {"error": "El patrón ya existe"}
 
-    patrones.append({
-        "patron": patron.patron,
-        "categoria": patron.categoria,
-        "nivel_alerta": patron.nivel_alerta,
-        "sugerencia": patron.sugerencia
-    })
-
-    guardar_patrones(patrones)
+    add_pattern(patron.patron, patron.categoria, patron.nivel_alerta, patron.sugerencia)
     return {"ok": True}
 
 
 @router.delete("/patrones/{patron}")
 def eliminar_patron(patron: str):
-    patron = unquote(patron)
-    patrones = leer_patrones_csv_base()
-    patrones = [p for p in patrones if p["patron"] != patron]
-    guardar_patrones(patrones)
-    return {"ok": True}
+    delete_pattern(patron)
 
 
 @router.post("/patrones/cargar-archivo")

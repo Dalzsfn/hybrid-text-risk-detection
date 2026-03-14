@@ -9,7 +9,7 @@ def leer_patrones_csv(archivo):
     reader = csv.reader(io.StringIO(contenido))
     patrones = []
 
-    next(reader, None)  # saltar encabezado
+    next(reader, None)  
     for fila in reader:
         if len(fila) < 4:
             continue

@@ -43,7 +43,7 @@ function PatternConfig() {
       if (data.error) {
         setErrorManual(data.error)
       } else {
-        setMensajeManual("✅ Patrón agregado correctamente")
+        setMensajeManual("Patrón agregado correctamente")
         setPatron("")
         setSugerencia("")
         cargarPatrones()
@@ -73,7 +73,7 @@ function PatternConfig() {
       if (data.error) {
         setErrorArchivo(data.error)
       } else {
-        setMensajeArchivo(`✅ ${data.cantidad} patrones cargados`)
+        setMensajeArchivo(`${data.cantidad} patrones cargados`)
         setArchivo(null)
         cargarPatrones()
       }
@@ -123,7 +123,7 @@ function PatternConfig() {
 
       {/* ================= MANUAL ================= */}
       <section className="space-y-4">
-        <h2 className="text-xl font-bold">➕ Agregar patrón</h2>
+        <h2 className="text-xl font-bold">Agregar patrón</h2>
 
         <input
           className="border p-2 w-full"
@@ -137,7 +137,7 @@ function PatternConfig() {
           value={categoria}
           onChange={e => setCategoria(e.target.value)}
         >
-          <option>Queja</option>
+          <option>Queja leve</option>
           <option>Reclamo</option>
           <option>Reclamo crítico</option>
           <option>Riesgo legal</option>
@@ -174,7 +174,7 @@ function PatternConfig() {
 
       {/* ================= ARCHIVO ================= */}
       <section className="space-y-4">
-        <h2 className="text-xl font-bold">📂 Cargar desde archivo</h2>
+        <h2 className="text-xl font-bold">Cargar desde archivo</h2>
 
         {!archivo && (
           <FileUpload
@@ -207,7 +207,7 @@ function PatternConfig() {
 
       {/* ================= LISTADO ================= */}
       <section className="space-y-4">
-        <h2 className="text-xl font-bold">📋 Patrones existentes</h2>
+        <h2 className="text-xl font-bold">Patrones existentes</h2>
 
         <select
           className="border p-2"
@@ -215,7 +215,7 @@ function PatternConfig() {
           onChange={e => setFiltroCategoria(e.target.value)}
         >
           <option>Todos</option>
-          <option>Queja</option>
+          <option>Queja leve</option>
           <option>Reclamo</option>
           <option>Reclamo crítico</option>
           <option>Riesgo legal</option>

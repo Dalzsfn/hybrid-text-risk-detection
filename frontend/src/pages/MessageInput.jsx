@@ -107,7 +107,7 @@ function MessageInput() {
 
           {resultados.length === 0 && (
             <p className="text-green-600">
-              ✅ No se detectaron reclamos
+              No se detectaron reclamos
             </p>
           )}
 
