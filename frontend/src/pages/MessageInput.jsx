@@ -21,7 +21,7 @@ function MessageInput() {
         formData.append("archivo", archivo)
       }
 
-      const res = await fetch('${process.env.REACT_APP_API_URL}/analizar', {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/analizar`, {
         method: "POST",
         body: formData
       })

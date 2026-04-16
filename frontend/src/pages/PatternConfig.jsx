@@ -27,7 +27,7 @@ function PatternConfig() {
     }
 
     try {
-      const res = await fetch('${process.env.REACT_APP_API_URL}/patrones', {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/patrones`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -64,7 +64,7 @@ function PatternConfig() {
 
     try {
       const res = await fetch(
-        '${process.env.REACT_APP_API_URL}/patrones/cargar-archivo',
+        `${import.meta.env.VITE_API_URL}/patrones/cargar-archivo`,
         { method: "POST", body: formData }
       )
 
@@ -90,7 +90,7 @@ function PatternConfig() {
 
   const cargarPatrones = async () => {
     try {
-      const res = await fetch('${process.env.REACT_APP_API_URL}/patrones')
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/patrones`)
       const data = await res.json()
       setPatrones(data)
     } catch {
@@ -102,7 +102,7 @@ function PatternConfig() {
     if (!confirm("¿Eliminar este patrón?")) return
 
     await fetch(
-      `${process.env.REACT_APP_API_URL}/patrones/${encodeURIComponent(patron)}`,
+      `${import.meta.env.VITE_API_URL}/patrones/${encodeURIComponent(patron)}`,
       { method: "DELETE" }
     )
 

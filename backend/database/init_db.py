@@ -61,7 +61,7 @@ def _seed_patterns_from_csv() -> None:
                     "suggestion": suggestion,
                 },
             )
-            print('Insertado patrón:', pattern)
+            
     
 
 def initialize_database() -> None:

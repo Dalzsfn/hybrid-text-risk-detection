@@ -33,7 +33,7 @@ function Stats() {
 
     if (!confirmar) return
 
-    fetch("${process.env.REACT_APP_API_URL}/estadisticas/reset", {
+    fetch(`${import.meta.env.VITE_API_URL}/estadisticas/reset`, {
       method: "POST"
     })
       .then(res => {

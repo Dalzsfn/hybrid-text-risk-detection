@@ -8,7 +8,7 @@ function PatronesForm() {
   const [msg, setMsg] = useState("")
 
   const guardar = async () => {
-    const res = await fetch('${process.env.REACT_APP_API_URL}/patrones', {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/patrones`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
