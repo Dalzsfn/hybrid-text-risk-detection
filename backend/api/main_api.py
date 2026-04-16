@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from backend.api.patterns import router as patrones_router
 from backend.app.core.estadisticas import registrar_resultados,obtener_estadisticas,reset_estadisticas
 from backend.app.core.sistema import cargar_patrones, analizar_mensaje
+from backend.database.init_db import initialize_database
 from backend.utils.pattern_loader import PATRONES_PATH
 from backend.utils.file_utils import leer_txt,leer_pdf,leer_csv_como_texto,leer_excel_como_texto
 
@@ -14,6 +15,11 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+@app.on_event("startup")
+def startup_event():
+    initialize_database()
 
 @app.get("/")
 def root():

@@ -108,13 +108,13 @@ python -m venv venv
 
 Activar entorno:
 
-* Windows
+- Windows
 
 ```bash
 venv\Scripts\activate
 ```
 
-* macOS/Linux
+- macOS/Linux
 
 ```bash
 source venv/bin/activate
@@ -126,13 +126,35 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 4) Ejecutar backend
+### 4) Configurar variables de entorno
+
+Copiar el archivo de ejemplo y ajustar valores si hace falta:
+
+```bash
+copy .env.example .env
+```
+
+En macOS/Linux:
+
+```bash
+cp .env.example .env
+```
+
+### 5) Levantar base de datos PostgreSQL (recomendado con Docker)
+
+```bash
+docker compose up -d
+```
+
+La API inicializa automaticamente la tabla `patterns` y carga los datos base desde `backend/data/patrones.csv` en el arranque.
+
+### 6) Ejecutar backend
 
 ```bash
 uvicorn backend.api.main_api:app --reload
 ```
 
-### 5) Ejecutar frontend
+### 7) Ejecutar frontend
 
 ```bash
 cd frontend
@@ -150,4 +172,4 @@ Node.js (para frontend React)
 
 Dependencias del backend definidas en:
 
-`requirements.txt` 
+`requirements.txt`
