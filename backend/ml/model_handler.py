@@ -1,6 +1,6 @@
 import joblib
 from pathlib import Path
-from backend.api.config import MODEL_PATH
+from api.config import MODEL_PATH
 
 _model_cache = None
 

@@ -1,6 +1,6 @@
 import re
 from sklearn.metrics.pairwise import cosine_similarity
-from backend.ml.model_handler import load_ml_components
+from ml.model_handler import load_ml_components
 
 UMBRAL_MODELO = 0.60
 UMBRAL_SIMILITUD = 0.5

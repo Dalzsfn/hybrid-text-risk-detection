@@ -3,7 +3,7 @@ from pathlib import Path
 
 from sqlalchemy import text
 
-from backend.database.connection import engine
+from database.connection import engine
 
 
 CSV_PATTERNS_PATH = Path(__file__).resolve().parent.parent / "data" / "patrones.csv"

@@ -1,7 +1,7 @@
 import csv
 import io
 import pandas as pd
-from backend.api.config import PATRONES_PATH
+from api.config import PATRONES_PATH
 
 
 def leer_patrones_csv(archivo):

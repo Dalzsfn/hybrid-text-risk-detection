@@ -1,5 +1,5 @@
 from sqlalchemy import text
-from backend.database.connection import engine
+from database.connection import engine
 from urllib.parse import unquote
 
 

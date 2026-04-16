@@ -1,6 +1,6 @@
 import time
-from backend.app.algorithms.kmp import find_kmp
-from backend.app.algorithms.boyer_moore import find_boyer_moore
+from app.algorithms.kmp import find_kmp
+from app.algorithms.boyer_moore import find_boyer_moore
 
 def medir_algoritmos(texto, patron, repeticiones=5):
     tiempos_kmp = []

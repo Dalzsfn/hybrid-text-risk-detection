@@ -1,7 +1,7 @@
 import csv
-from backend.app.core.medicion import medir_algoritmos
-from backend.utils.normalization import normalizar_texto
-from backend.ml.inference import analizar_texto
+from app.core.medicion import medir_algoritmos
+from utils.normalization import normalizar_texto
+from ml.inference import analizar_texto
 import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))

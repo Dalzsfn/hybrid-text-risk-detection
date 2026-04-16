@@ -3,8 +3,8 @@ import joblib
 from sklearn.pipeline import Pipeline
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
-from backend.api.config import PATRONES_PATH, MODEL_PATH
-from backend.utils.normalization import normalizar_texto
+from api.config import PATRONES_PATH, MODEL_PATH
+from utils.normalization import normalizar_texto
 
 def entrenar_modelo():
     df = pd.read_csv(PATRONES_PATH)
