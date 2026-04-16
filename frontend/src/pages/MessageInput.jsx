@@ -21,7 +21,7 @@ function MessageInput() {
         formData.append("archivo", archivo)
       }
 
-      const res = await fetch("http://127.0.0.1:8000/analizar", {
+      const res = await fetch("${process.env.REACT_APP_API_URL}/analizar", {
         method: "POST",
         body: formData
       })

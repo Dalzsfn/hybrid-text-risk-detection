@@ -8,7 +8,7 @@ function Stats() {
   const cargarEstadisticas = () => {
     setLoading(true)
 
-    fetch("http://127.0.0.1:8000/estadisticas")
+    fetch("${process.env.REACT_APP_API_URL}/estadisticas")
       .then(res => {
         if (!res.ok) throw new Error("Error al cargar estadísticas")
         return res.json()
@@ -33,7 +33,7 @@ function Stats() {
 
     if (!confirmar) return
 
-    fetch("http://127.0.0.1:8000/estadisticas/reset", {
+    fetch("${process.env.REACT_APP_API_URL}/estadisticas/reset", {
       method: "POST"
     })
       .then(res => {

@@ -27,7 +27,7 @@ function PatternConfig() {
     }
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/patrones", {
+      const res = await fetch("${process.env.REACT_APP_API_URL}/patrones", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -64,7 +64,7 @@ function PatternConfig() {
 
     try {
       const res = await fetch(
-        "http://127.0.0.1:8000/patrones/cargar-archivo",
+        "${process.env.REACT_APP_API_URL}/patrones/cargar-archivo",
         { method: "POST", body: formData }
       )
 
@@ -90,7 +90,7 @@ function PatternConfig() {
 
   const cargarPatrones = async () => {
     try {
-      const res = await fetch("http://127.0.0.1:8000/patrones")
+      const res = await fetch("${process.env.REACT_APP_API_URL}/patrones")
       const data = await res.json()
       setPatrones(data)
     } catch {
@@ -102,7 +102,7 @@ function PatternConfig() {
     if (!confirm("¿Eliminar este patrón?")) return
 
     await fetch(
-      `http://127.0.0.1:8000/patrones/${encodeURIComponent(patron)}`,
+      `${process.env.REACT_APP_API_URL}/patrones/${encodeURIComponent(patron)}`,
       { method: "DELETE" }
     )
 
