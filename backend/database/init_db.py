@@ -23,6 +23,7 @@ def _create_patterns_table() -> None:
 
 
 def _seed_patterns_from_csv() -> None:
+    print("📄 Ejecutando seed...")
     if not CSV_PATTERNS_PATH.exists():
         return
 
@@ -47,7 +48,7 @@ def _seed_patterns_from_csv() -> None:
             category = (row.get("categoria") or "").strip()
             risk_level = (row.get("nivel_alerta") or "").strip()
             suggestion = (row.get("sugerencia") or "").strip()
-
+             
             if not pattern:
                 continue
 
@@ -60,8 +61,10 @@ def _seed_patterns_from_csv() -> None:
                     "suggestion": suggestion,
                 },
             )
-
+            print('Insertado patrón:', pattern)
+    
 
 def initialize_database() -> None:
+    print("Inicializando base de datos...")
     _create_patterns_table()
     _seed_patterns_from_csv()

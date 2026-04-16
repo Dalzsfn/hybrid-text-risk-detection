@@ -27,7 +27,7 @@ function PatternConfig() {
     }
 
     try {
-      const res = await fetch("${process.env.REACT_APP_API_URL}/patrones", {
+      const res = await fetch('${process.env.REACT_APP_API_URL}/patrones', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -64,7 +64,7 @@ function PatternConfig() {
 
     try {
       const res = await fetch(
-        "${process.env.REACT_APP_API_URL}/patrones/cargar-archivo",
+        '${process.env.REACT_APP_API_URL}/patrones/cargar-archivo',
         { method: "POST", body: formData }
       )
 
@@ -90,7 +90,7 @@ function PatternConfig() {
 
   const cargarPatrones = async () => {
     try {
-      const res = await fetch("${process.env.REACT_APP_API_URL}/patrones")
+      const res = await fetch('${process.env.REACT_APP_API_URL}/patrones')
       const data = await res.json()
       setPatrones(data)
     } catch {
