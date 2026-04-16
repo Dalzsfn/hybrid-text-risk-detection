@@ -1,160 +1,169 @@
 # Hybrid Text Risk Detection Engine
 
-Sistema híbrido para la detección y clasificación de patrones de riesgo en textos largos.
+Proyecto desarrollado inicialmente en el curso Estructuras de Datos y Algoritmos II (EDA II) y posteriormente extendido de forma independiente para integrar técnicas de Machine Learning, similitud semántica y arquitectura cliente-servidor con FastAPI.
 
-Proyecto desarrollado inicialmente en el curso **Estructuras de Datos y Algoritmos II (EDA II)** y posteriormente extendido de forma independiente para integrar técnicas de **Machine Learning, similitud semántica y arquitectura cliente-servidor con FastAPI**.
+Motor hibrido para deteccion y clasificacion de patrones de riesgo en texto libre y archivos.
 
----
+El proyecto combina algoritmos clasicos de busqueda de cadenas con un pipeline de Machine Learning para mejorar cobertura y robustez en escenarios reales.
 
-## Objetivo
+## Tabla de contenido
 
-Detectar automáticamente patrones de riesgo dentro de textos extensos y archivos para clasificarlos según su severidad:
+- Descripcion general
+- Caracteristicas
+- Flujo de procesamiento
+- Arquitectura
+- Stack tecnologico
+- Requisitos
+- Configuracion del entorno
+- Ejecucion local
+- Ejecucion con Docker Compose
+- Endpoints de la API
+- Formatos de archivo soportados
+- Estado del proyecto
 
-- Queja leve  
-- Reclamo  
-- Reclamo crítico  
-- Riesgo legal  
+## Descripcion general
 
-El sistema combina enfoques determinísticos y probabilísticos para lograr mayor robustez.
+Objetivo: detectar expresiones de riesgo en mensajes extensos, clasificarlas por severidad y devolver resultados estructurados para consumo por UI o integracion externa.
 
----
+Niveles de severidad utilizados:
 
-## Enfoque híbrido
+- Queja leve
+- Reclamo
+- Reclamo critico
+- Riesgo legal
 
-1. Segmentación del texto en frases
+## Caracteristicas
 
-2. Detección exacta mediante:
-    - Knuth–Morris–Pratt (KMP)
-    - Boyer–Moore (BM)
+- Deteccion exacta con implementaciones propias de KMP y Boyer-Moore.
+- Deteccion aproximada con TF-IDF + similitud coseno.
+- Clasificacion supervisada con Logistic Regression.
+- API REST en FastAPI para analisis, estadisticas y gestion de patrones.
+- Frontend en React + Vite para carga de texto/archivo y visualizacion de resultados.
+- Inicializacion automatica de tabla y carga de patrones base al arrancar el backend.
 
-3. Detección aproximada mediante:
-    - Vectorización TF-IDF  
-    - Similitud coseno  
+## Flujo de procesamiento
 
-4. Clasificación supervisada:
-    - Logistic Regression  
+1. Ingreso de texto (manual o desde archivo).
+2. Normalizacion y segmentacion.
+3. Deteccion exacta (KMP/BM).
+4. Deteccion aproximada (similitud semantica).
+5. Clasificacion de severidad.
+6. Respuesta JSON con coincidencias y metadatos.
 
-5. Determinación de severidad máxima por documento  
+## Arquitectura
 
----
+Frontend (React/Vite)
+-> API REST (FastAPI)
+-> Motor hibrido de deteccion
+-> Clasificacion ML
+-> Respuesta JSON
 
-## Arquitectura del sistema
+## Stack tecnologico
 
-Frontend (React)  
-↓  
-API REST (FastAPI)  
-↓  
-Motor híbrido de detección  
-↓  
-Clasificación ML  
-↓  
-Respuesta JSON estructurada  
+- Backend: FastAPI, SQLAlchemy, psycopg2, pandas, scikit-learn
+- Base de datos: PostgreSQL
+- Frontend: React 19, Vite, Tailwind CSS
+- Contenedores: Docker, Docker Compose
 
----
+## Requisitos
 
-## Componentes técnicos
+- Python 3.12 o superior
+- Node.js 20 o superior
+- Docker Desktop (opcional, recomendado)
 
-### Algoritmos clásicos
+## Configuracion del entorno
 
-- Implementación propia de KMP  
-- Implementación propia de Boyer–Moore  
-- Comparación de tiempos de ejecución  
-- Normalización y limpieza de texto  
-
-### Machine Learning
-
-- TF-IDF Vectorizer  
-- Logistic Regression  
-- Similitud coseno para filtrado semántico  
-- Clasificación por frase en textos largos  
-
-### Backend
-
-- FastAPI  
-- Manejo de archivos (PDF, Excel, CSV)  
-- Endpoint REST `/analizar`  
-
----
-
-## Estado actual
-
-✔ Sistema determinístico funcional  
-✔ Detección híbrida exacta + semántica  
-✔ Clasificación por severidad  
-✔ API REST operativa  
-✔ Frontend con separación de coincidencias exactas y aproximadas  
-⚠ Ajuste fino de thresholds en progreso  
-⚠ Migración futura de CSV a base de datos  
-⚠ Dockerización pendiente  
-
----
-
-## Instalación
-
-### 1️) Clonar repositorio
+1. Clonar repositorio
 
 ```bash
 git clone https://github.com/Dalzsfn/hybrid-text-risk-detection.git
-cd hybrid-text-risk-detection 
+cd hybrid-text-risk-detection
 ```
 
-### 2) Entorno virtual
+2. Crear archivo de entorno en raiz
 
-Crear entorno:
-
-```bash
-python -m venv venv
-```
-
-Activar entorno:
-
-- Windows
-
-```bash
-venv\Scripts\activate
-```
-
-- macOS/Linux
-
-```bash
-source venv/bin/activate
-```
-
-### 3) Instalar dependencias
-
-```bash
-pip install -r requirements.txt
-```
-
-### 4) Configurar variables de entorno
-
-Copiar el archivo de ejemplo y ajustar valores si hace falta:
+Windows:
 
 ```bash
 copy .env.example .env
 ```
 
-En macOS/Linux:
+macOS/Linux:
 
 ```bash
 cp .env.example .env
 ```
 
-### 5) Levantar base de datos PostgreSQL (recomendado con Docker)
+Variables esperadas en `.env`:
 
-```bash
-docker compose up -d
+```env
+DB_USER=postgres
+DB_PASSWORD=postgres
+DB_HOST=postgres
+DB_PORT=5432
+DB_NAME=hybrid_risk
 ```
 
-La API inicializa automaticamente la tabla `patterns` y carga los datos base desde `backend/data/patrones.csv` en el arranque.
+3. Crear archivo de entorno para frontend
 
-### 6) Ejecutar backend
+Windows:
 
 ```bash
-uvicorn backend.api.main_api:app --reload
+copy frontend\.env.example frontend\.env
 ```
 
-### 7) Ejecutar frontend
+macOS/Linux:
+
+```bash
+cp frontend/.env.example frontend/.env
+```
+
+Valor por defecto:
+
+```env
+VITE_API_URL=http://localhost:8000
+```
+
+## Ejecucion local
+
+### 1) Backend
+
+Desde la raiz del proyecto:
+
+```bash
+python -m venv .venv
+```
+
+Activar entorno virtual:
+
+Windows (PowerShell):
+
+```bash
+.venv\Scripts\Activate.ps1
+```
+
+macOS/Linux:
+
+```bash
+source .venv/bin/activate
+```
+
+Instalar dependencias del backend:
+
+```bash
+pip install -r backend/requirements.txt
+```
+
+Iniciar API (ejecutar desde carpeta `backend`):
+
+```bash
+cd backend
+uvicorn api.main_api:app --reload --host 0.0.0.0 --port 8000
+```
+
+### 2) Frontend
+
+En otra terminal:
 
 ```bash
 cd frontend
@@ -162,14 +171,61 @@ npm install
 npm run dev
 ```
 
----
+Frontend disponible en `http://localhost:5173`.
 
-## Requisitos
+## Ejecucion con Docker Compose
 
-Python 3.12+
+Levantar todo el stack (PostgreSQL + backend + frontend):
 
-Node.js (para frontend React)
+```bash
+docker compose up --build
+```
 
-Dependencias del backend definidas en:
+Servicios:
 
-`requirements.txt`
+- Frontend: `http://localhost:5173`
+- Backend: `http://localhost:8000`
+- PostgreSQL: `localhost:5432`
+
+Al iniciar, el backend crea la tabla `patterns` (si no existe) y carga/actualiza patrones desde `backend/data/patrones.csv`.
+
+## Endpoints de la API
+
+Base URL local: `http://localhost:8000`
+
+- `GET /` estado de servicio
+- `POST /analizar` analiza texto o archivo
+- `GET /estadisticas` consulta estadisticas acumuladas
+- `POST /estadisticas/reset` reinicia estadisticas
+- `GET /patrones` lista patrones
+- `POST /patrones` crea un patron
+- `DELETE /patrones/{patron}` elimina un patron
+- `POST /patrones/cargar-archivo` carga patrones desde archivo
+
+## Formatos de archivo soportados
+
+Para analisis (`/analizar`):
+
+- `.txt`
+- `.pdf`
+- `.csv`
+- `.xlsx`
+
+Para carga masiva de patrones (`/patrones/cargar-archivo`):
+
+- `.txt`
+- `.csv`
+- `.xlsx`
+
+## Estado del proyecto
+
+- Implementacion hibrida operativa (exacta + aproximada).
+- Clasificacion por severidad en produccion academica.
+- Persistencia en PostgreSQL con seed inicial automatico.
+- Frontend funcional para analisis y gestion de patrones.
+
+Siguientes mejoras:
+
+- Ajuste fino de umbrales de similitud y confianza.
+- Actualización del modelo por agregación/eliminación de patrones.
+
