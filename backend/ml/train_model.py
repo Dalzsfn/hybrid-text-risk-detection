@@ -10,7 +10,7 @@ def entrenar_modelo():
     df = pd.read_csv(PATRONES_PATH)
     X = df["patron"]
     y = df["categoria"]
-
+    
     stopwords_es = [
         "el", "la", "los", "las", "un", "una",
         "de", "del", "y", "o", "que", "en", "a"
@@ -37,6 +37,6 @@ def entrenar_modelo():
     }
 
     joblib.dump(model_data, MODEL_PATH)
-
+    
 if __name__ == "__main__":
     entrenar_modelo()

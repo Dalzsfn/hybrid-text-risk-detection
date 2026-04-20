@@ -6,6 +6,7 @@ from app.core.sistema import cargar_patrones, analizar_mensaje
 from database.init_db import initialize_database
 from utils.pattern_loader import PATRONES_PATH
 from utils.file_utils import leer_txt,leer_pdf,leer_csv_como_texto,leer_excel_como_texto
+from database.queries import get_patterns
 
 app = FastAPI()
 app.include_router(patrones_router)
@@ -59,7 +60,7 @@ async def analizar(
     if not texto.strip():
         return {"error": "El contenido a analizar está vacío"}
 
-    patrones = cargar_patrones(PATRONES_PATH)
+    patrones = get_patterns()
     resultados = analizar_mensaje(texto, patrones)
 
     registrar_resultados(resultados)

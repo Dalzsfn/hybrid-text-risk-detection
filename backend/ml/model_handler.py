@@ -1,6 +1,8 @@
 import joblib
 from pathlib import Path
 from api.config import MODEL_PATH
+import sys
+import app
 
 _model_cache = None
 
@@ -16,7 +18,8 @@ def load_ml_components():
                 f"No se encontró el modelo en {MODEL_PATH}. "
                 "Ejecuta primero el script de entrenamiento."
             )
-
+            
+        sys.modules['backend'] = app
         model_data = joblib.load(model_path)
         if "pipeline" not in model_data:
             raise ValueError("El archivo del modelo no contiene 'pipeline'.")
