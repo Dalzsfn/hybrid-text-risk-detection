@@ -27,6 +27,8 @@ services:
       DB_NAME: ${DB_NAME}
     ports:
       - "8000:8000"
+    volumes:
+    - ./backend:/app
 
   frontend:
     build: ./frontend
