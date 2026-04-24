@@ -15,20 +15,18 @@ def analizar_texto(texto):
     resultados = []
 
     for frase in frases:
-        probas = modelo.predict_proba([frase])[0]
-        categoria_index = probas.argmax()
-        categoria = modelo.classes_[categoria_index]
-        prob_modelo = float(probas[categoria_index])
-
         frase_vec = vectorizer.transform([frase])
         similitudes = cosine_similarity(frase_vec, patrones_vec)[0]
-
         max_index = similitudes.argmax()
         max_similitud = float(similitudes.max())
         patron_relacionado = patrones_texto[max_index]
-
+        
         if  max_similitud > UMBRAL_SIMILITUD:
-
+            
+            probas = modelo.predict_proba([frase])[0]
+            categoria_index = probas.argmax()
+            categoria = modelo.classes_[categoria_index]
+            prob_modelo = float(probas[categoria_index])
             resultados.append({
                 "frase": frase,
                 "categoria": categoria,

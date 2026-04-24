@@ -399,3 +399,163 @@ la fruta no estaba tan madura como queria,Queja leve,Bajo,Ajustar frecuencia
 el agua de cortesia estaba a temperatura ambiente,Queja leve,Bajo,Personalizar alertas
 el proceso de devolucion requiere muchos pasos,Queja leve,Bajo,Optimizar codigo
 la llamada se escuchaba con un poco de eco,Queja leve,Bajo,Guias de usuario
+mi abogado se pondra en contacto mañana,Riesgo legal,Crítico,Derivar a departamento legal
+esto es un delito tipificado en el codigo penal,Riesgo legal,Crítico,Escalar a direccion juridica
+iniciare un procedimiento monitorio por impago,Riesgo legal,Crítico,Revisar estado de cuenta y legal
+denuncia presentara ante la superintendencia,Riesgo legal,Crítico,Activar protocolo regulatorio
+es una apropiacion indebida de mi capital,Riesgo legal,Crítico,Iniciar auditoria financiera
+tienen una notificacion notarial en camino,Riesgo legal,Crítico,Preparar recepcion legal
+esto constituye un vicio oculto en el contrato,Riesgo legal,Crítico,Revisar clausulas firmadas
+solicitare el levantamiento del velo corporativo,Riesgo legal,Crítico,Notificar a socios y legal
+exijo mediacion extrajudicial inmediata,Riesgo legal,Crítico,Coordinar asesoria legal
+hay dolo en la firma de este documento,Riesgo legal,Crítico,Activar defensa juridica
+llevare esto al tribunal de arbitraje comercial,Riesgo legal,Crítico,Preparar alegatos
+ustedes estan operando un esquema piramidal fraudulento,Riesgo legal,Crítico,Denuncia penal
+incurrieron en falsedad documental,Riesgo legal,Crítico,Escalar a auditoria interna
+presentare un recurso de amparo constitucional,Riesgo legal,Crítico,Revisar marco normativo
+fuga de datos reportada a la agencia de proteccion,Riesgo legal,Crítico,Activar protocolo ciberseguridad
+tengo captura de su estafa y va para el juez,Riesgo legal,Crítico,Escalar caso juridico
+demanda civil por daños morales en curso,Riesgo legal,Crítico,Evaluar impacto legal
+nos veremos en los juzgados de lo mercantil,Riesgo legal,Crítico,Notificar area juridica
+este cobro es usura penada por la ley,Riesgo legal,Crítico,Revisar cumplimiento regulatorio
+estoy redactando la demanda con mi bufete,Riesgo legal,Crítico,Activar protocolo legal inmediato
+estoy harto de que me roben en mi cara,Reclamo crítico,Alto,Escalar investigacion interna
+cancelo ahora mismo este servicio basura,Reclamo crítico,Alto,Activar retencion avanzada
+es la peor experiencia de usuario de mi vida,Reclamo crítico,Alto,Implementar mejora inmediata
+me han arruinado las vacaciones por completo,Reclamo crítico,Alto,Evaluar compensacion urgente
+devuelvanme mi plata o les hundo la reputacion,Reclamo crítico,Alto,Gestionar riesgo reputacional
+su incompetencia me hizo perder un cliente vital,Reclamo crítico,Alto,Evaluar daño emergente
+exijo que rueden cabezas por este desastre,Reclamo crítico,Alto,Asignar supervisor senior
+el gerente me falto al respeto a gritos,Reclamo crítico,Alto,Medidas disciplinarias
+esto es un atropello total a mi dignidad,Reclamo crítico,Alto,Contactar al cliente de inmediato
+no me sirven sus disculpas de manual,Reclamo crítico,Alto,Empatia y solucion tecnica
+es increible la negligencia con la que operan,Reclamo crítico,Alto,Auditoria operativa urgente
+exijo la devolucion total mas una compensacion,Reclamo crítico,Alto,Procesar reembolso y analizar
+voy a salir en la television a denunciarlos,Reclamo crítico,Alto,Gabinete de crisis
+me dejaron tirado a medianoche sin respuesta,Reclamo crítico,Alto,Recuperar contacto hoy
+su call center es una tortura psicologica,Reclamo crítico,Alto,Revisar procesos internos
+es una falta de profesionalismo repugnante,Reclamo crítico,Alto,Reasignar a senior
+llevo tres meses esperando y esto es el colmo,Reclamo crítico,Alto,Seguimiento diario del caso
+me niego a pagar un centavo mas por esta porqueria,Reclamo crítico,Alto,Revisar precios vs calidad
+han bloqueado mi cuenta sin ninguna justificacion,Reclamo crítico,Alto,Escalar a gerencia inmediata
+son la peor empresa del pais sin duda alguna,Reclamo crítico,Alto,Disculpa institucional
+el repartidor dejo mi paquete en la calle,Reclamo,Medio,Revisar logistica
+me cobraron la cuota de mantenimiento dos veces,Reclamo,Medio,Validar transaccion
+la talla de los zapatos no es la que pedi,Reclamo,Medio,Coordinar cambio
+mi internet se cae todas las noches a la misma hora,Reclamo,Medio,Investigar infraestructura
+hice la transferencia pero no se refleja el saldo,Reclamo,Medio,Escalar a soporte tecnico
+el cupon de primera compra me da error,Reclamo,Medio,Generar nuevo codigo
+el producto llego con el sello de seguridad roto,Reclamo,Medio,Ofrecer reemplazo
+la garantia no quiere cubrir la reparacion de la pantalla,Reclamo,Medio,Revisar compromiso comercial
+solicite soporte hace tres dias y nada,Reclamo,Medio,Verificar estado del caso
+la app de mi celular se queda en pantalla blanca,Reclamo,Medio,Escalar a tecnología
+el cargo a mi tarjeta de credito esta duplicado,Reclamo,Medio,Procesar devolucion
+el tecnico dejo todo sucio despues de instalar,Reclamo,Medio,Auditoria interna
+me llego el modelo anterior en lugar del nuevo,Reclamo,Medio,Enviar faltante
+sus horarios de atencion no coinciden con la web,Reclamo,Medio,Optimizar tiempos
+la llamada se corto en medio del soporte,Reclamo,Medio,Asignar nuevo agente
+no puedo descargar la factura electronica del portal,Reclamo,Medio,Soporte de datos
+el reembolso lleva procesando mas de 15 dias,Reclamo,Medio,Acelerar pago
+el producto empezo a hacer un ruido raro hoy,Reclamo,Medio,Investigar causa raiz
+me asignaron un asiento diferente al que compre,Reclamo,Medio,Verificar condiciones pactadas
+la instalacion quedo torcida y mal ajustada,Reclamo,Medio,Asignar tecnico especializado
+la musica de espera en el telefono marea un poco,Queja leve,Bajo,Evaluar mejoras
+el empaque tenia una esquina ligeramente doblada,Queja leve,Bajo,Revisar embalaje
+me gustaria que tuvieran mas tallas grandes disponibles,Queja leve,Bajo,Mejorar inventario
+el correo de confirmacion se fue a la bandeja de spam,Queja leve,Bajo,Ajustar configuracion de email
+la sopa estaba un poquito desabrida hoy,Queja leve,Bajo,Analizar producto
+el proceso de registro tiene demasiados campos obligatorios,Queja leve,Bajo,Simplificar pasos
+el color de la camiseta es un poco mas palido en persona,Queja leve,Bajo,Revisar expectativas
+hacia un poco de calor en la sucursal del centro,Queja leve,Bajo,Reforzar limpieza y clima
+la actualizacion de la app le cambio de lugar a los botones,Queja leve,Bajo,Guias de usuario
+el chat en vivo tardo 3 minutos en conectar,Queja leve,Bajo,Optimizar tiempos de respuesta
+los carritos del supermercado chillan al rodar,Queja leve,Bajo,Revisar procesos operativos
+falto que incluyeran servilletas en mi pedido a domicilio,Queja leve,Bajo,Verificar proceso
+el diseño de la pagina web se ve raro en mi tablet,Queja leve,Bajo,UX review
+la chica de caja no me ofrecio bolsa de regalo,Queja leve,Bajo,Capacitar equipo
+los precios subieron unos centavos sin previo aviso,Queja leve,Bajo,Revisar politica de precios
+esperaba que la tela fuera un poco mas suave al tacto,Queja leve,Bajo,Revisar propuesta
+me llegaron dos notificaciones push iguales,Queja leve,Bajo,Personalizar alertas
+el baño no tenia papel toalla para secarse las manos,Queja leve,Bajo,Supervision de equipo
+el texto de los terminos es muy largo de leer,Queja leve,Bajo,Mejorar comunicacion
+el helado se derritio un poquito durante el viaje,Queja leve,Bajo,Revisar tiempos operativos
+les voy a meter una tutela por violar mis derechos,Riesgo legal,Crítico,Coordinar asesoria legal
+mañana mismo voy a la profeco a levantar mi denuncia,Riesgo legal,Crítico,Derivar a departamento legal
+esto lo denuncio en el sernac hoy mismo sin falta,Riesgo legal,Crítico,Activar protocolo juridico
+ya meti mi queja en indecopi por publicidad engañosa,Riesgo legal,Crítico,Revisar marco normativo
+mis abogados ya estan redactando la carta notarial,Riesgo legal,Crítico,Preparar documentacion legal
+voy a ir a la defensoria del pueblo por este abuso,Riesgo legal,Crítico,Escalar caso juridico
+esto es una tranza y los voy a demandar,Riesgo legal,Crítico,Activar defensa juridica
+iniciare un reclamo formal ante la superintendencia,Riesgo legal,Crítico,Notificar area juridica
+los voy a llevar a juicio por daños y perjuicios morales,Riesgo legal,Crítico,Evaluar impacto legal
+esto califica como fraude corporativo en la ley,Riesgo legal,Crítico,Iniciar auditoria interna
+acudire a la sic para que los multen por usureros,Riesgo legal,Crítico,Revisar cumplimiento regulatorio
+tengo todas las capturas y van para la fiscalia,Riesgo legal,Crítico,Escalar juridicamente
+estan violando la ley del consumidor y los voy a joder,Riesgo legal,Crítico,Coordinar respuesta legal
+prepárense para la demanda colectiva que les vamos a armar,Riesgo legal,Crítico,Preparar estrategia legal
+el contrato tiene clausulas abusivas y lo voy a impugnar,Riesgo legal,Crítico,Revisar clausulas contractuales
+ustedes cometieron el delito de usura y cobro coactivo,Riesgo legal,Crítico,Escalar a direccion juridica
+mi abogado les hara llegar la citacion judicial pronto,Riesgo legal,Crítico,Notificar asesoria juridica
+los denunciare por divulgacion indebida de mis datos,Riesgo legal,Crítico,Activar protocolo legal inmediato
+van a tener que responderme frente al juez civil,Riesgo legal,Crítico,Escalar a departamento legal
+esto es un robo a mano armada y va para el ministerio publico,Riesgo legal,Crítico,Notificar policia
+son unos reverendos rateros devuelvanme mi plata,Reclamo crítico,Alto,Escalar a gerencia inmediata
+estoy mamado de que me tomen del pelo con este servicio,Reclamo crítico,Alto,Contactar al cliente de inmediato
+son unos chantas de primera no les compro nunca mas,Reclamo crítico,Alto,Activar protocolo de retencion
+me vieron la cara de pendejo exijo mi reembolso ya,Reclamo crítico,Alto,Priorizar resolucion urgente
+esta vaina no sirve para nada devuelvanme el dinero,Reclamo crítico,Alto,Procesar reembolso
+es la peor pendejada que he comprado en mi vida,Reclamo crítico,Alto,Revisar calidad
+me tienen podrido con sus excusas baratas y mentiras,Reclamo crítico,Alto,Asignar supervisor senior
+los voy a quemar en todas mis redes sociales por estafadores,Reclamo crítico,Alto,Gestionar riesgo reputacional
+su servicio al cliente vale madre no resuelven nada,Reclamo crítico,Alto,Escalar a direccion
+son la empresa mas chafa y mediocre de todo el pais,Reclamo crítico,Alto,Disculpa institucional
+me tienen de un lado a otro y nadie me da solucion,Reclamo crítico,Alto,Seguimiento diario del caso
+cancelenme esta porqueria de servicio ahorita mismo,Reclamo crítico,Alto,Activar retencion avanzada
+es una burla como tratan a los clientes fieles de años,Reclamo crítico,Alto,Revisar procesos internos
+juegan con el tiempo y la plata de la gente que rabia,Reclamo crítico,Alto,Evaluar daño emergente
+me dejaron colgado con el pedido y nadie me da razon,Reclamo crítico,Alto,Recuperar contacto hoy
+exijo hablar con el jefe o gerente en este instante,Reclamo crítico,Alto,Llamada de gerencia
+el trato del man que me atendio fue un asco total,Reclamo crítico,Alto,Sancion administrativa interna
+no sean descarados y asuman la culpa de su maldito error,Reclamo crítico,Alto,Empatia y solucion tecnica
+su internet es una basura se cae a cada rato,Reclamo crítico,Alto,Auditoria operativa urgente
+estoy re caliente con ustedes son de lo peorcito,Reclamo crítico,Alto,Contactar cliente urgente
+la encomienda aparece entregada pero aca no llego nada,Reclamo,Medio,Investigar logistica
+me debitaron dos veces la misma cuota de la tarjeta,Reclamo,Medio,Validar transaccion
+la app se queda pasmada y se cierra sola de la nada,Reclamo,Medio,Escalar a tecnología
+el chavo del delivery me trajo el pedido todo aplastado,Reclamo,Medio,Ofrecer reemplazo
+pido soporte y me dejan en visto horas en el whatsapp,Reclamo,Medio,Optimizar tiempos
+el cajero se trago mi plata y no me dio el recibo,Reclamo,Medio,Escalar a soporte tecnico
+me mandaron la talla equivocada de las zapatillas,Reclamo,Medio,Coordinar cambio
+la transferencia rebotó pero igual me descontaron la plata,Reclamo,Medio,Procesar devolucion
+sus tecnicos me dejaron metido y nunca llegaron a la casa,Reclamo,Medio,Reasignar caso
+la garantia se hace la loca y no quiere cubrir el celular,Reclamo,Medio,Revisar compromiso comercial
+me estan cobrando intereses de mora que nada que ver,Reclamo,Medio,Revisar factura
+el paquete llego todo abierto y le faltan piezas adentro,Reclamo,Medio,Enviar faltante
+la factura me llego con un monton de recargos escondidos,Reclamo,Medio,Asignar nuevo agente
+el asesor me corto la llamada en plena cara,Reclamo,Medio,Auditoria interna
+intento cancelar la suscripcion y la pagina da error 404,Reclamo,Medio,Baja manual
+los megas no me duran ni una semana y eso que tengo plan,Reclamo,Medio,Investigar causa raiz
+el vuelo se retraso 4 horas y ni un vaso de agua nos dieron,Reclamo,Medio,Asignar equipo especializado
+el aire acondicionado que me instalaron gotea mucha agua,Reclamo,Medio,Asignar tecnico especializado
+su bot de chat no entiende ni papa de lo que le pregunto,Reclamo,Medio,Escalar internamente
+la promocion del 2x1 no me paso en la caja registradora,Reclamo,Medio,Aplicar descuento retroactivo
+el parcero que me atendio andaba como de muy malas,Queja leve,Bajo,Capacitar personal
+se demoraron un chorro en traerme la cuenta a la mesa,Queja leve,Bajo,Optimizar tiempos
+la comida llego un poco fria seguro por el trancon,Queja leve,Bajo,Revisar tiempos logistica
+esta un poquito caro para el tamaño de la porcion que dan,Queja leve,Bajo,Evaluar promociones
+la fila para pagar estaba re larga y solo habia una caja,Queja leve,Bajo,Abrir mas cajas
+el empaque del regalo venia un poco arrugado de una punta,Queja leve,Bajo,Revisar embalaje
+el tinto que me sirvieron estaba muy aguado la verdad,Queja leve,Bajo,Analizar producto
+el vigilante de la entrada ni las buenas tardes dio,Queja leve,Bajo,Reforzar entrenamiento
+hacia demasiado frio adentro de la sucursal tenian el aire a full,Queja leve,Bajo,Ajustar temperatura
+la musica estaba a todo volumen y no dejaba ni platicar,Queja leve,Bajo,Ajustar volumen
+el carrito de compras del super tenia una llanta trabada,Queja leve,Bajo,Revisar operacion
+falto que me mandaran los sobres de aji o salsas con el pollo,Queja leve,Bajo,Verificar proceso
+el baño estaba limpio pero no habia jabon liquido para lavarse,Queja leve,Bajo,Supervision de equipo
+las letras del menu estan muy chiquitas y casi no se leen,Queja leve,Bajo,Rediseño visual
+me mandaron demasiados correos de ofertas el dia de hoy,Queja leve,Bajo,Ajustar frecuencia
+el mesero se confundio con mi bebida pero enseguida me la cambio,Queja leve,Bajo,Contactar para mejorar
+la app esta chevere pero siento que gasta muchisima bateria,Queja leve,Bajo,Optimizar codigo
+el diseño de la pagina web se ve un poco anticuado para mi gusto,Queja leve,Bajo,UX review
+habia un olor como a guardado o humedad en el pasillo del fondo,Queja leve,Bajo,Reforzar limpieza
+el estacionamiento esta un poco estrecho para parquear la camioneta,Queja leve,Bajo,Revisar expectativas
